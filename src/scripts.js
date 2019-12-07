@@ -2,12 +2,15 @@ const recipeSection = document.querySelector('.recipes-section');
 const nameDropdown = document.querySelector('.name-options');
 const tagDropdown = document.querySelector('.tag-options');
 const ingredientDropdown = document.querySelector('.ingredient-options');
+// const hamburgerBtn = document.querySelcetor('.nav-bar-btn')
 
 populateCards();
 namesDropdown();
 ingredientsDropdown();
-tagsDropdown();
 
+function addClassToLines(btn) {
+  btn.classList.toggle("change")
+}
 
 function populateCards() {
   return recipeData.forEach(element => {
@@ -37,21 +40,6 @@ function namesDropdown() {
   })
 }
 
-function tagsDropdown() {
-  let tagNames = recipeData.reduce((acc, recipe) => {
-    let getTag = recipe.tags.forEach(tag => {
-      if (!acc.includes(tag)) {
-      acc.push(tag)
-    }
-    })
-    return acc
-  }, [])
-  return tagNames.forEach(tag => {
-    tagDropdown.innerHTML += `
-    <option class="test" value="test">${tag}</option>`
-  })
-}
-
 function ingredientsDropdown() {
   let ingredientNames = ingredientData.map(element => element.name)
   let sortedIngredients = ingredientNames.sort()
@@ -61,3 +49,9 @@ function ingredientsDropdown() {
       `
   })
 }
+
+/* <section class="nav-bar-dropdown">
+      <p class="preference-dropdown"><u>My Favorites</u></p>
+      <p class="preference-dropdown"><u>Ready To Cook</u></p>
+      <p class="preference-dropdown"><u>My Pantry</u></p>
+    </section> */
