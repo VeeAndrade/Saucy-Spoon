@@ -53,7 +53,7 @@ function tagsDropdown() {
 }
 
 function ingredientsDropdown() {
-  let ingredientNames = ingredientData.map(element => element.name)
+  let ingredientNames = ingredientsData.map(element => element.name)
   let sortedIngredients = ingredientNames.sort()
   return sortedIngredients.map(element => {
     ingredientDropdown.innerHTML += `
