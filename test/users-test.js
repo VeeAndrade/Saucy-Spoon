@@ -2,15 +2,27 @@ const chai = require('chai');
 const expect = chai.expect;
 
 const User = require('../src/user.js')
+const Recipe = require('../src/recipe.js')
+
 
 describe('User', () => {
-  let users
-
+  let user
+  let recipe
   beforeEach(() => {
       user = new User(1, "Saige O\'Kon", [
         { "ingredient": 11477, "amount": 1},
         { "ingredient": 93820, "amount": 1}
       ]);
+      recipe = new Recipe({
+        "name": "Dirty Steve's Original Wing Sauce",
+        "id": 412309,
+        "image": "https://spoonacular.com/recipeImages/412309-556x370.jpeg",
+        "ingredients": [
+          {"name": "black pepper", "id": 1002030, "quantity": {"amount": 4, "unit": "teaspoons"}},
+          { "name": "brown sugar", "id": 19334, "quantity": {"amount": 8,"unit": "tablespoons"}}
+        ],
+        "instructions": [{"number": 1, "instruction": "Sir mix a lot of dis"}],
+        "tags": ["sauce"]})
     });
 
     it('should be an instance of User', () => {
@@ -39,4 +51,18 @@ describe('User', () => {
     it('should have no recipes to cook by default', () => {
       expect(user.favoriteRecipes).to.eql([])
     });
+
+    it('should be able to add a recipe to the favorites property', () => {
+      expect(user.favoriteRecipes).to.eql([]);
+      user.addToFavorites(recipe);
+      expect(user.favoriteRecipes).to.eql([recipe])
+    });
+
+    it('should be able to remove from favorites', () => {
+      expect(user.favoriteRecipes).to.eql([]);
+      user.addToFavorites(recipe);
+      expect(user.favoriteRecipes).to.eql([recipe])
+      user.removeFromFavorites(recipe);
+      expect(user.favoriteRecipes).to.eql([]);
+    })
 })
