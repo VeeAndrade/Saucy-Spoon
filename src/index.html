@@ -8,12 +8,17 @@
 </head>
   <body>
     <header class="nav-bar">
-      <button class="nav-bar-btn" onclick="addClassToLines(this)">
+      <button class="nav-bar-btn">
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
       </button>
       <h1 class="nav-bar-heading">Saucy Spoon</h1>
+      <section class="nav-bar-dropdown">
+      <p class="preference-dropdown"><u>My Favorites</u></p>
+      <p class="preference-dropdown"><u>Ready To Cook</u></p>
+      <p class="preference-dropdown pantry-btn"><u>My Pantry</u></p>
+    </section>
     </header>
     <section class="main">
       <form class="main-top">
@@ -34,10 +39,20 @@
             </select>
           </div>
         </form>
-      <section class="recipes-section">
+      <section class="content-section">
+        <div class="recipe-container"></div>
+        <div class="pantry-container">
+          <!-- <div class="pantry-item">
+            <p class="pantry-item-name">Item Name</p>
+            <button class="subtract-quantity">-</button>
+            <p class="pantry-item-quantity">5</p>
+            <button class="add-quantity">+</button>
+          </div> -->
+        </div>
       </section>
     </section>
     <script type="text/javascript" src="./recipe.js"></script>
+    <script type="text/javascript" src="./user.js"></script>
     <script type="text/javascript" src="../data/users.js"></script>
     <script type="text/javascript" src="../data/recipes.js"></script>
     <script type="text/javascript" src="../data/ingredients.js"></script>
