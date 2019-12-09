@@ -7,12 +7,14 @@ const hamburgerBtn = document.querySelector('.nav-bar-btn');
 const navDropDown = document.querySelector('.nav-bar-dropdown');
 const pantryContainer = document.querySelector('.pantry-container')
 const pantryBtn = document.querySelector('.pantry-btn')
+const homeBtn = document.querySelector('.home-btn')
 
 populateCards();
 namesDropdown();
 ingredientsDropdown();
 tagsDropdown();
 
+homeBtn.addEventListener('click', returnHome)
 hamburgerBtn.addEventListener('click', openMenu)
 pantryBtn.addEventListener('click', loadPantry)
 pantryContainer.addEventListener('click', addQuantity)
@@ -74,6 +76,14 @@ function ingredientsDropdown() {
       <option class="test" value="test">${element}</option>
       `
   })
+}
+
+function returnHome() {
+  if (recipeContainer.classList.contains("hide-section")) {
+    recipeContainer.classList.toggle('hide-section')
+    pantryContainer.classList.toggle('hide-section')
+  }
+  openMenu();
 }
 
 function loadPantry() {
