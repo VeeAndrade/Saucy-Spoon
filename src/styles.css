@@ -177,7 +177,7 @@ select {
   flex-direction: column;
   border: solid black 2px;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: rgb(189, 189, 189);
   width: 400px;
   height: 400px;
   margin: 40px;
@@ -188,11 +188,10 @@ select {
 .recipe-card-bar {
   display: flex;
   flex-direction: column;
-  background-color: #f1e8b7;
+  background-color: transparent;
   border-radius: 0px 0px 10px 10px;
   border-top: solid black 1px;
   height: 15%;
-  /* position: absolute; */
 }
 
 .recipe-card-name {
@@ -202,8 +201,6 @@ select {
 .recipe-img {
   height: 85%;
   border-radius: 8px 8px 0px 0px;
-  /* border: solid black 5px; */
-  /* width: auto; */
 }
 
 .btns-container {
@@ -215,7 +212,8 @@ select {
   background-image: url("../images/favorite.svg");
   height: 30px;
   width: 30px;
-  background-color: #f1e8b7;
+  background-color: rgb(189, 189, 189);
+  ;
   border: none;
 }
 
@@ -228,8 +226,13 @@ select {
   height: 30px;
   width: 30px;
   background-size: contain;
-  background-color: #f1e8b7;
+  background-color: rgb(189, 189, 189);
+  ;
   border: none;
+}
+
+.cook-btn-active {
+  background-image: url("../images/cutlery-active.svg");
 }
 
 .pantry-container {
