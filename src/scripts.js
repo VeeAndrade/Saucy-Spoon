@@ -7,16 +7,21 @@ const hamburgerBtn = document.querySelector('.nav-bar-btn');
 const navDropDown = document.querySelector('.nav-bar-dropdown');
 const pantryContainer = document.querySelector('.pantry-container')
 const pantryBtn = document.querySelector('.pantry-btn')
+const homeBtn = document.querySelector('.home-btn')
 
 populateCards();
 namesDropdown();
 ingredientsDropdown();
 tagsDropdown();
 
+homeBtn.addEventListener('click', returnHome)
 hamburgerBtn.addEventListener('click', openMenu)
 pantryBtn.addEventListener('click', loadPantry)
 pantryContainer.addEventListener('click', addQuantity)
 pantryContainer.addEventListener('click', subtractQuantity)
+recipeContainer.addEventListener('click', favoriteRecipe)
+recipeContainer.addEventListener('click', addToCook)
+
 
 function openMenu() {
   hamburgerBtn.classList.toggle("change")
@@ -76,12 +81,33 @@ function ingredientsDropdown() {
   })
 }
 
+function favoriteRecipe(event) {
+  if(event.target.classList.contains('heart-btn')) {
+    event.target.classList.toggle('heart-btn-active')
+  }
+}
+
+function addToCook(event) {
+  if (event.target.classList.contains('cook-btn')) {
+    event.target.classList.toggle('cook-btn-active')
+  }
+}
+
+function returnHome() {
+  if (recipeContainer.classList.contains("hide-section")) {
+    recipeContainer.classList.toggle('hide-section')
+    pantryContainer.classList.toggle('hide-section')
+  }
+  openMenu();
+}
+
 function loadPantry() {
   if (!recipeContainer.classList.contains("hide-section")) {
   recipeContainer.classList.toggle("hide-section")
   }
   openMenu();
   populatePantry();
+  // Set up conditional to remove hide section from current pantry if loaded
 }
 
 function populatePantry() {
