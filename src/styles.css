@@ -172,11 +172,6 @@ select {
   padding: 0px 100px 0px 100px;
 }
 
-.hide-section {
-  display: none;
-
-}
-
 .recipe-card {
   display: flex;
   flex-direction: column;
@@ -252,4 +247,9 @@ select {
 
 .pantry-item-quantity {
   display: inline-block;
+}
+
+.hide-section {
+  display: none;
+
 }
