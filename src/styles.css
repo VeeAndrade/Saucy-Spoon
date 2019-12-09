@@ -219,6 +219,10 @@ select {
   border: none;
 }
 
+.heart-btn-active {
+  background-image: url("../images/favorite-active.svg");
+}
+
 .cook-btn {
   background-image: url("../images/cutlery.svg");
   height: 30px;
