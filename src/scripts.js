@@ -20,6 +20,8 @@ pantryBtn.addEventListener('click', loadPantry)
 pantryContainer.addEventListener('click', addQuantity)
 pantryContainer.addEventListener('click', subtractQuantity)
 recipeContainer.addEventListener('click', favoriteRecipe)
+recipeContainer.addEventListener('click', addToCook)
+
 
 function openMenu() {
   hamburgerBtn.classList.toggle("change")
@@ -85,6 +87,12 @@ function favoriteRecipe(event) {
   }
 }
 
+function addToCook(event) {
+  if (event.target.classList.contains('cook-btn')) {
+    event.target.classList.toggle('cook-btn-active')
+  }
+}
+
 function returnHome() {
   if (recipeContainer.classList.contains("hide-section")) {
     recipeContainer.classList.toggle('hide-section')
@@ -99,6 +107,7 @@ function loadPantry() {
   }
   openMenu();
   populatePantry();
+  // Set up conditional to remove hide section from current pantry if loaded
 }
 
 function populatePantry() {
