@@ -15,6 +15,8 @@ tagsDropdown();
 
 hamburgerBtn.addEventListener('click', openMenu)
 pantryBtn.addEventListener('click', loadPantry)
+pantryContainer.addEventListener('click', addQuantity)
+pantryContainer.addEventListener('click', subtractQuantity)
 
 function openMenu() {
   hamburgerBtn.classList.toggle("change")
@@ -83,14 +85,31 @@ function loadPantry() {
 }
 
 function populatePantry() {
-  console.log(users[0].pantry)
-  return users[0].pantry.forEach(element => {
+  users[0].pantry.forEach(pantryItem => {
+      let ingredient = ingredientData.find(ingredient => {
+      return pantryItem.ingredient === ingredient.id;
+    })
+    if (ingredient) {
     pantryContainer.innerHTML += `
     <div class="pantry-item">
-      <p class="pantry-item-name">${element.ingredient}</p>
+      <p class="pantry-item-name">${ingredient.name}</p>
       <button class="subtract-quantity">-</button>
-      <p class="pantry-item-quantity">${element.amount}</p>
+      <p class="pantry-item-quantity">${pantryItem.amount}</p>
       <button class="add-quantity">+</button>
-    </div>`
-  })
+    </div>`    
+  }})
+}
+
+function addQuantity() {
+  if (event.target.classList.contains('add-quantity')) {
+
+  console.log("add")
+  }
+}
+
+function subtractQuantity() {
+  if (event.target.classList.contains('subtract-quantity')) {
+
+  console.log("subtract")
+  }
 }
