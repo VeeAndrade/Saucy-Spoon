@@ -19,6 +19,7 @@ hamburgerBtn.addEventListener('click', openMenu)
 pantryBtn.addEventListener('click', loadPantry)
 pantryContainer.addEventListener('click', addQuantity)
 pantryContainer.addEventListener('click', subtractQuantity)
+recipeContainer.addEventListener('click', favoriteRecipe)
 
 function openMenu() {
   hamburgerBtn.classList.toggle("change")
@@ -76,6 +77,12 @@ function ingredientsDropdown() {
       <option class="test" value="test">${element}</option>
       `
   })
+}
+
+function favoriteRecipe(event) {
+  if(event.target.classList.contains('heart-btn')) {
+    event.target.classList.toggle('heart-btn-active')
+  }
 }
 
 function returnHome() {
