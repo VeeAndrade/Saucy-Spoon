@@ -7,13 +7,12 @@ class User {
     this.recipesToCook = [];
   }
 
-  addToFavorites(recipe) {
-    this.favoriteRecipes.push(recipe)
+  addToFavorites(id) {
+    this.favoriteRecipes.push(id)
   }
 
-  removeFromFavorites(recipe) {
-    let i = this.favoriteRecipes.forEach((r, i) => recipe.id === r.id ? i : r)
-    this.favoriteRecipes = this.favoriteRecipes.splice(i, 0)
+  removeFromFavorites(id) {
+    this.favoriteRecipes.splice(this.favoriteRecipes.indexOf(id), 1)
   }
 }
 
