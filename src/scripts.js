@@ -9,6 +9,8 @@ const pantryContainer = document.querySelector('.pantry-container')
 const pantryBtn = document.querySelector('.pantry-btn')
 const homeBtn = document.querySelector('.home-btn');
 const randomNum = Math.floor(Math.random() * 49 + 1);
+const user = getUser();
+
 
 populateCards();
 namesDropdown();
@@ -33,16 +35,16 @@ function populateCards() {
   return recipeData.forEach(element => {
     let recipe = new Recipe(element.name, element.id, element.image, element.ingredients, element.instructions, element.tags)
     recipeContainer.innerHTML += `
-      <div class="recipe-card">
-        <img class="recipe-img" src=${recipe.image}>
-        <div class="recipe-card-bar">
-          <p class="recipe-card-name">${recipe.name}</p>
-          <div class='btns-container'>
-            <button class="heart-btn"></button>
-            <button class="cook-btn"></button>
-          </div>
-        </div>
-      </div>`
+    <div class="recipe-card">
+    <img class="recipe-img" src=${recipe.image}>
+    <div class="recipe-card-bar">
+    <p class="recipe-card-name">${recipe.name}</p>
+    <div class='btns-container'>
+    <button class="heart-btn"></button>
+    <button class="cook-btn"></button>
+    </div>
+    </div>
+    </div>`
   })
 }
 
@@ -52,8 +54,8 @@ function namesDropdown() {
   return sortedRecipes.map(element => {
     let recipe = new Recipe(element)
     nameDropdown.innerHTML += `
-      <option class="test" value="test">${recipe.name}</option>
-      `
+    <option class="test" value="test">${recipe.name}</option>
+    `
   })
 }
 
@@ -61,8 +63,8 @@ function tagsDropdown() {
   let tagNames = recipeData.reduce((acc, recipe) => {
     let getTag = recipe.tags.forEach(tag => {
       if (!acc.includes(tag)) {
-      acc.push(tag)
-    }
+        acc.push(tag)
+      }
     })
     return acc
   }, [])
@@ -77,18 +79,22 @@ function ingredientsDropdown() {
   let sortedIngredients = ingredientNames.sort()
   return sortedIngredients.map(element => {
     ingredientDropdown.innerHTML += `
-      <option class="test" value="test">${element}</option>
-      `
+    <option class="test" value="test">${element}</option>
+    `
   })
 }
 
-
 function getUser() {
-  return users.find((user, i) => {
+  let grabUser = users.find((user, i) => {
     if(i === randomNum) {
-      return user
+      return user;
     }
   })
+  return new User(grabUser.id, grabUser.name, grabUser.pantry)
+}
+
+function addRecipeToFavs() {
+ user.addToFavorites()
 }
 
 function favoriteRecipe(event) {
@@ -121,7 +127,6 @@ function loadPantry() {
 }
 
 function populatePantry() {
-  let user = getUser();
     user.pantry.forEach(pantryItem => {
       let ingredient = ingredientData.find(ingredient => {
       return pantryItem.ingredient === ingredient.id;
