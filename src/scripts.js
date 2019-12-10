@@ -8,22 +8,25 @@ const navDropDown = document.querySelector('.nav-bar-dropdown');
 const pantryContainer = document.querySelector('.pantry-container')
 const pantryBtn = document.querySelector('.pantry-btn')
 const homeBtn = document.querySelector('.home-btn')
+const favoritesContainer = document.querySelector('.favorites-container')
+const favoritesBtn = document.querySelector('.favorites-btn')
+const readyToCookContainer = document.querySelector('.ready-to-cook-container')
+const readyToCookBtn = document.querySelector('.ready-to-cook-btn')
 
 populateCards();
 namesDropdown();
 ingredientsDropdown();
 tagsDropdown();
+populatePantry();
 
-homeBtn.addEventListener('click', returnHome)
-hamburgerBtn.addEventListener('click', openMenu)
-pantryBtn.addEventListener('click', loadPantry)
+hamburgerBtn.addEventListener('click', toggleMenu)
 pantryContainer.addEventListener('click', addQuantity)
 pantryContainer.addEventListener('click', subtractQuantity)
 recipeContainer.addEventListener('click', favoriteRecipe)
 recipeContainer.addEventListener('click', addToCook)
+navDropDown.addEventListener('click', controlPages)
 
-
-function openMenu() {
+function toggleMenu() {
   hamburgerBtn.classList.toggle("change")
   navDropDown.classList.toggle("dropdown-open")
 }
@@ -93,21 +96,29 @@ function addToCook(event) {
   }
 }
 
-function returnHome() {
-  if (recipeContainer.classList.contains("hide-section")) {
-    recipeContainer.classList.toggle('hide-section')
-    pantryContainer.classList.toggle('hide-section')
+function controlPages(event) {
+  let active = document.querySelector(".active-page");
+  let clicked;
+
+  if (event.target === homeBtn) {
+    clicked = recipeContainer
   }
-  openMenu();
+  if (event.target === favoritesBtn) {
+    clicked = favoritesContainer
+  }
+  if (event.target === pantryBtn) {
+    clicked = pantryContainer
+  }
+  loadPage(active, clicked)
 }
 
-function loadPantry() {
-  if (!recipeContainer.classList.contains("hide-section")) {
-  recipeContainer.classList.toggle("hide-section")
-  }
-  openMenu();
-  populatePantry();
-  // Set up conditional to remove hide section from current pantry if loaded
+function loadPage(activePage, clickedPage) {
+  activePage.classList.toggle("hide-section");
+  activePage.classList.toggle("active-page");
+  clickedPage.classList.toggle("hide-section")
+  clickedPage.classList.toggle("active-page")
+
+  toggleMenu();
 }
 
 function populatePantry() {
@@ -122,7 +133,7 @@ function populatePantry() {
       <button class="subtract-quantity">-</button>
       <p class="pantry-item-quantity">${pantryItem.amount}</p>
       <button class="add-quantity">+</button>
-    </div>`    
+    </div>`
   }})
 }
 
