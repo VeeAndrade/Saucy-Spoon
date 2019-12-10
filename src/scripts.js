@@ -7,7 +7,8 @@ const hamburgerBtn = document.querySelector('.nav-bar-btn');
 const navDropDown = document.querySelector('.nav-bar-dropdown');
 const pantryContainer = document.querySelector('.pantry-container')
 const pantryBtn = document.querySelector('.pantry-btn')
-const homeBtn = document.querySelector('.home-btn')
+const homeBtn = document.querySelector('.home-btn');
+const randomNum = Math.floor(Math.random() * 49 + 1);
 
 populateCards();
 namesDropdown();
@@ -81,6 +82,15 @@ function ingredientsDropdown() {
   })
 }
 
+
+function getUser() {
+  return users.find((user, i) => {
+    if(i === randomNum) {
+      return user
+    }
+  })
+}
+
 function favoriteRecipe(event) {
   if(event.target.classList.contains('heart-btn')) {
     event.target.classList.toggle('heart-btn-active')
@@ -111,7 +121,8 @@ function loadPantry() {
 }
 
 function populatePantry() {
-  users[0].pantry.forEach(pantryItem => {
+  let user = getUser();
+    user.pantry.forEach(pantryItem => {
       let ingredient = ingredientData.find(ingredient => {
       return pantryItem.ingredient === ingredient.id;
     })
