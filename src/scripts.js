@@ -1,3 +1,4 @@
+const mainSection = document.querySelector('.main');
 const contentSection = document.querySelector('.content-section');
 const recipeContainer = document.querySelector('.recipe-container');
 const nameDropdown = document.querySelector('.name-options');
@@ -19,12 +20,13 @@ ingredientsDropdown();
 tagsDropdown();
 populatePantry();
 
-hamburgerBtn.addEventListener('click', toggleMenu)
-pantryContainer.addEventListener('click', addQuantity)
-pantryContainer.addEventListener('click', subtractQuantity)
-recipeContainer.addEventListener('click', favoriteRecipe)
-recipeContainer.addEventListener('click', addToCook)
-navDropDown.addEventListener('click', controlPages)
+hamburgerBtn.addEventListener('click', toggleMenu);
+pantryContainer.addEventListener('click', addQuantity);
+pantryContainer.addEventListener('click', subtractQuantity);
+recipeContainer.addEventListener('click', favoriteRecipe);
+recipeContainer.addEventListener('click', addToCook);
+recipeContainer.addEventListener('click', showRecipe);
+navDropDown.addEventListener('click', controlPages);
 
 function toggleMenu() {
   hamburgerBtn.classList.toggle("change")
@@ -119,6 +121,40 @@ function loadPage(activePage, clickedPage) {
   clickedPage.classList.toggle("active-page")
 
   toggleMenu();
+}
+
+function showRecipe(event) {
+  if (event.target.classList.contains('recipe-img')) {
+    mainSection.insertAdjacentHTML('afterbegin', `
+      <div class="shown-container">
+            <article class="recipe-shown">
+              <header class="recipe-header-container">
+                <h2 class="recipe-title"></h2>
+                <button class="close-btn" type="button" name="button">X</button>
+              </header>
+              <aside class="ingredient-items">
+                  <img class="recipe-pic" src="https://savorysweetlife.com/wp-content/uploads/2009/10/CHOCOLATE-CHIP-COOKIES-3-1024x1024.jpg">
+                  <div class="ingredient-list">
+                    ingredients
+                  </div>
+              </aside>
+              <div class="recipe-instructions">
+                <h3>Instructions</h3>
+                <p> "number": 1,
+                  "instruction": "In a large mixing bowl, whisk together the dry ingredients (flour, pudding mix, soda and salt). Set aside.In a large mixing bowl of a stand mixer, cream butter for 30 seconds. Gradually add granulated sugar and brown sugar and cream until light and fluffy.</p>
+                <p>"number": 1,
+                  "instruction": "In a large mixing bowl, whisk together the dry ingredients (flour, pudding mix, soda and salt). Set aside.In a large mixing bowl of a stand mixer, cream butter for 30 seconds. Gradually add granulated sugar and brown sugar and cream until light and fluffy.</p>
+              </div>
+            </article>
+          </div>`)
+    let xBtn = document.querySelector('.close-btn');
+    xBtn.addEventListener('click', closeRecipe);
+
+  }
+}
+
+function closeRecipe(event) {
+  event.target.parentElement.parentElement.remove();
 }
 
 function populatePantry() {
