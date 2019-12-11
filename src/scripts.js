@@ -10,6 +10,7 @@ const pantryContainer = document.querySelector('.pantry-container')
 const pantryBtn = document.querySelector('.pantry-btn')
 const homeBtn = document.querySelector('.home-btn')
 const favoritesContainer = document.querySelector('.favorites-container')
+const favCardSection = document.querySelector(".favorite-cards")
 const favoritesBtn = document.querySelector('.favorites-btn')
 const readyToCookContainer = document.querySelector('.ready-to-cook-container')
 const readyToCookBtn = document.querySelector('.ready-to-cook-btn')
@@ -30,6 +31,7 @@ recipeContainer.addEventListener('click', favoriteRecipe);
 recipeContainer.addEventListener('click', addToCook);
 recipeContainer.addEventListener('click', showRecipe);
 navDropDown.addEventListener('click', controlPages);
+favoritesBtn.addEventListener('click', populateFavorites);
 
 function toggleMenu() {
   hamburgerBtn.classList.toggle("change")
@@ -136,6 +138,9 @@ function controlPages(event) {
   if (event.target === pantryBtn) {
     clicked = pantryContainer
   }
+  if (event.target === readyToCookBtn) {
+    clicked = readyToCookContainer
+  }
   loadPage(active, clicked)
 }
 
@@ -241,4 +246,31 @@ function subtractQuantity() {
 
   console.log("subtract")
   }
+}
+
+function populateFavorites() {
+  favCardSection.innerHTML = ``;
+  return user.favoriteRecipes.map(id => {
+    let item = recipeData.find(recipe => recipe.id === Number(id))
+    // favoritesContainer.innerHTML = 
+    favCardSection.insertAdjacentHTML('beforeend', `
+      <div class="favorited-recipe">
+        <div class="favorited-recipe">
+          <section class="favorite-recipe-name">
+            <h4>${item.name}</h4>
+          </section>
+            <img class="favorite-recipe-img" src="${item.image}">
+              <section class="favorites-action-bar">
+                <button class="get-directions-btn action-btn">Directions</button>
+                <button class="remove-from-favorites action-btn">Remove</button>
+              </section>
+            </div>
+            </div>
+      
+    `)
+  })
+}
+
+function populateReadyToCook() {
+
 }
