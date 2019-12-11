@@ -14,6 +14,7 @@ const favCardSection = document.querySelector(".favorite-cards")
 const favoritesBtn = document.querySelector('.favorites-btn')
 const readyToCookContainer = document.querySelector('.ready-to-cook-container')
 const readyToCookBtn = document.querySelector('.ready-to-cook-btn')
+const readyToCookSection = document.querySelector('.ready-cards')
 const randomNum = Math.floor(Math.random() * 49 + 1);
 let cardID = [];
 const user = getUser();
@@ -34,6 +35,7 @@ recipeContainer.addEventListener('click', addRecipeToReadyArr);
 recipeContainer.addEventListener('click', showRecipe);
 navDropDown.addEventListener('click', controlPages);
 favoritesBtn.addEventListener('click', populateFavorites);
+readyToCookBtn.addEventListener('click', populateReadyToCook);
 
 function toggleMenu() {
   hamburgerBtn.classList.toggle("change")
@@ -281,5 +283,20 @@ function populateFavorites() {
 }
 
 function populateReadyToCook() {
-
+  readyToCookSection.innerHTML = ``;
+  return user.recipesToCook.map(id => {
+    let item = recipeData.find(recipe => recipe.id === Number(id))
+    readyToCookSection.insertAdjacentHTML('beforeend', `
+      <div class="favorited-recipe">
+          <section class="favorite-recipe-name">
+            <h4>${item.name}</h4>
+          </section>
+            <img class="favorite-recipe-img" src="${item.image}">
+              <section class="favorites-action-bar">
+                <button class="get-directions-btn action-btn">Directions</button>
+                <button class="remove-from-favorites action-btn">Remove</button>
+              </section>
+            </div>
+    `)
+  })
 }
