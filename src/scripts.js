@@ -14,6 +14,7 @@ const favoritesBtn = document.querySelector('.favorites-btn')
 const readyToCookContainer = document.querySelector('.ready-to-cook-container')
 const readyToCookBtn = document.querySelector('.ready-to-cook-btn')
 const randomNum = Math.floor(Math.random() * 49 + 1);
+let cardID = [];
 const user = getUser();
 
 populateCards();
@@ -147,36 +148,42 @@ function loadPage(activePage, clickedPage) {
 
 function showRecipe(event) {
   if (event.target.classList.contains('recipe-img')) {
-    mainSection.insertAdjacentHTML('afterbegin', `
-      <div class="shown-container">
-            <article class="recipe-shown">
-              <header class="recipe-header-container">
-                <h2 class="recipe-title"></h2>
-                <button class="close-btn" type="button" name="button">X</button>
-              </header>
-              <aside class="ingredient-items">
-                  <img class="recipe-pic" src="https://savorysweetlife.com/wp-content/uploads/2009/10/CHOCOLATE-CHIP-COOKIES-3-1024x1024.jpg">
-                  <div class="ingredient-list">
-                    ingredients
+    cardID.push(event.target.parentNode.id);
+    recipeData.forEach(recipe => {
+      if (recipe.id === Number(cardID[0])) {
+        let selectedRecipe = new Recipe(recipe.name, recipe.id, recipe.image, recipe.ingredients, recipe.instructions, recipe.tags)
+        mainSection.insertAdjacentHTML('afterbegin', `
+          <div class="shown-container">
+                <article class="recipe-shown">
+                  <header class="recipe-header-container">
+                    <h2 class="recipe-title">${selectedRecipe.name}</h2>
+                    <button class="close-btn" type="button" name="button">X</button>
+                  </header>
+                  <aside class="ingredient-items">
+                      <img class="recipe-pic" src=${selectedRecipe.image}>
+                      <div class="ingredient-list">
+                      </div>
+                  </aside>
+                  <div class="recipe-instructions">
+                    <h3>Instructions</h3>
                   </div>
-              </aside>
-              <div class="recipe-instructions">
-                <h3>Instructions</h3>
-                <p> "number": 1,
-                  "instruction": "In a large mixing bowl, whisk together the dry ingredients (flour, pudding mix, soda and salt). Set aside.In a large mixing bowl of a stand mixer, cream butter for 30 seconds. Gradually add granulated sugar and brown sugar and cream until light and fluffy.</p>
-                <p>"number": 1,
-                  "instruction": "In a large mixing bowl, whisk together the dry ingredients (flour, pudding mix, soda and salt). Set aside.In a large mixing bowl of a stand mixer, cream butter for 30 seconds. Gradually add granulated sugar and brown sugar and cream until light and fluffy.</p>
-              </div>
-            </article>
-          </div>`)
-    let xBtn = document.querySelector('.close-btn');
-    xBtn.addEventListener('click', closeRecipe);
-
+                </article>
+              </div>`)
+              let xBtn = document.querySelector('.close-btn');
+              xBtn.addEventListener('click', closeRecipe);
+              loadIngredients();
+              loadInstructions();
+      }
+    })
   }
 }
 
 function closeRecipe(event) {
   event.target.parentElement.parentElement.remove();
+}
+
+loadIngredients() {
+
 }
 
 function populatePantry() {
