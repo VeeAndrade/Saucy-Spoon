@@ -15,11 +15,12 @@ const favoritesBtn = document.querySelector('.favorites-btn')
 const readyToCookContainer = document.querySelector('.ready-to-cook-container')
 const readyToCookBtn = document.querySelector('.ready-to-cook-btn')
 const readyToCookSection = document.querySelector('.ready-cards')
+const searchBtn = document.querySelector('.search-btn')
 const randomNum = Math.floor(Math.random() * 49 + 1);
 let cardID = [];
 const user = getUser();
 
-populateCards();
+populateCards(recipeData);
 namesDropdown();
 ingredientsDropdown();
 tagsDropdown();
@@ -32,18 +33,21 @@ recipeContainer.addEventListener('click', favoriteRecipe);
 recipeContainer.addEventListener('click', addToCook);
 recipeContainer.addEventListener('click', addRecipeToFavs);
 recipeContainer.addEventListener('click', addRecipeToReadyArr);
+readyToCookBtn.addEventListener('click', populateReadyToCook);
 recipeContainer.addEventListener('click', showRecipe);
 navDropDown.addEventListener('click', controlPages);
 favoritesBtn.addEventListener('click', populateFavorites);
-readyToCookBtn.addEventListener('click', populateReadyToCook);
+favCardSection.addEventListener('click', showRecipe);
+favCardSection.addEventListener('click', deleteFromFavs);
+searchBtn.addEventListener('click', findRecipe)
 
 function toggleMenu() {
   hamburgerBtn.classList.toggle("change")
   navDropDown.classList.toggle("dropdown-open")
 }
 
-function populateCards() {
-  return recipeData.forEach(element => {
+function populateCards(array) {
+  return array.forEach(element => {
     let recipe = new Recipe(element.name, element.id, element.image, element.ingredients, element.instructions, element.tags)
     recipeContainer.innerHTML += `
     <div class="recipe-card" id="${recipe.id}">
@@ -67,9 +71,18 @@ function namesDropdown() {
   return sortedRecipes.map(element => {
     let recipe = new Recipe(element)
     nameDropdown.innerHTML += `
-    <option class="test" value="test">${recipe.name}</option>
+    <option class="test" value="${recipe.name}">${recipe.name}</option>
     `
   })
+}
+
+function findRecipe() {
+  recipeContainer.innerHTML = ``;
+  let singleRecipe = [nameDropdown.value]
+  let filteredRecipe = [recipeData.find(recipe => {
+    return recipe.name.includes(singleRecipe)
+  })]
+  populateCards(filteredRecipe);
 }
 
 function tagsDropdown() {
@@ -83,7 +96,7 @@ function tagsDropdown() {
   }, [])
   return tagNames.forEach(tag => {
     tagDropdown.innerHTML += `
-    <option class="test" value="test">${tag}</option>`
+    <option class="test" value="${tag}">${tag}</option>`
   })
 }
 
@@ -128,6 +141,15 @@ function addRecipeToReadyArr(event) {
   }
 }
 
+function deleteFromFavs() {
+  if (event.target.classList.contains('remove-from-favorites')) {
+  let id = event.target.parentNode.id
+  event.target.parentNode.parentNode.remove();
+  user.removeFromFavorites(id)
+  // Take off heart active from homepage here
+  }
+}
+
 function favoriteRecipe(event) {
   if(event.target.classList.contains('heart-btn')) {
     event.target.classList.toggle('heart-btn-active')
@@ -169,7 +191,7 @@ function loadPage(activePage, clickedPage) {
 }
 
 function showRecipe(event) {
-  if (event.target.classList.contains('recipe-img')) {
+  if (event.target.classList.contains('recipe-img') || event.target.classList.contains('get-directions-btn')) {
     cardID.push(event.target.parentNode.id);
     recipeData.forEach(recipe => {
       if (recipe.id === Number(cardID[0])) {
@@ -272,12 +294,12 @@ function populateFavorites() {
           <section class="favorite-recipe-name">
             <h4>${item.name}</h4>
           </section>
-            <img class="favorite-recipe-img" src="${item.image}">
-              <section class="favorites-action-bar">
-                <button class="get-directions-btn action-btn">Directions</button>
-                <button class="remove-from-favorites action-btn">Remove</button>
-              </section>
-            </div>
+          <img class="favorite-recipe-img" src="${item.image}">
+          <section class="favorites-action-bar" id="${item.id}">
+            <button class="get-directions-btn action-btn">Directions</button>
+            <button class="remove-from-favorites action-btn">Remove</button>
+          </section>
+        </div>
     `)
   })
 }
