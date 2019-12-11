@@ -12,7 +12,6 @@ const favoritesContainer = document.querySelector('.favorites-container')
 const favoritesBtn = document.querySelector('.favorites-btn')
 const readyToCookContainer = document.querySelector('.ready-to-cook-container')
 const readyToCookBtn = document.querySelector('.ready-to-cook-btn')
-const homeBtn = document.querySelector('.home-btn');
 const randomNum = Math.floor(Math.random() * 49 + 1);
 const user = getUser();
 
@@ -27,6 +26,7 @@ pantryContainer.addEventListener('click', addQuantity)
 pantryContainer.addEventListener('click', subtractQuantity)
 recipeContainer.addEventListener('click', favoriteRecipe)
 recipeContainer.addEventListener('click', addToCook)
+recipeContainer.addEventListener('click', addRecipeToFavs)
 navDropDown.addEventListener('click', controlPages)
 
 function toggleMenu() {
@@ -38,14 +38,14 @@ function populateCards() {
   return recipeData.forEach(element => {
     let recipe = new Recipe(element.name, element.id, element.image, element.ingredients, element.instructions, element.tags)
     recipeContainer.innerHTML += `
-    <div class="recipe-card">
-    <img class="recipe-img" src=${recipe.image}>
+    <div class="recipe-card" id="${recipe.id}">
+      <img class="recipe-img" src=${recipe.image}>
     <div class="recipe-card-bar">
-    <p class="recipe-card-name">${recipe.name}</p>
-    <div class='btns-container'>
-    <button class="heart-btn"></button>
-    <button class="cook-btn"></button>
-    </div>
+      <p class="recipe-card-name">${recipe.name}</p>
+      <div class='btns-container' id="${recipe.id}">
+        <button class="heart-btn"></button>
+        <button class="cook-btn"></button>
+      </div>
     </div>
     </div>`
   })
@@ -96,8 +96,15 @@ function getUser() {
   return new User(grabUser.id, grabUser.name, grabUser.pantry)
 }
 
-function addRecipeToFavs() {
- user.addToFavorites()
+function addRecipeToFavs(event) {
+  let id = event.target.parentNode.id
+  if(event.target.classList.contains('heart-btn-active')){
+    if(!user.favoriteRecipes.includes(id)){
+      return user.addToFavorites(id)
+    }
+  } else { 
+    user.removeFromFavorites(id)
+  }
 }
 
 function favoriteRecipe(event) {
@@ -144,7 +151,7 @@ function populatePantry() {
     })
     if (ingredient) {
     pantryContainer.innerHTML += `
-    <div class="pantry-item">
+    <div class="pantry-item" id="${ingredient.id}">
       <p class="pantry-item-name">${ingredient.name}</p>
       <button class="subtract-quantity">-</button>
       <p class="pantry-item-quantity">${pantryItem.amount}</p>
