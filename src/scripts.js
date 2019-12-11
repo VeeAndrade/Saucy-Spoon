@@ -16,7 +16,7 @@ const readyToCookContainer = document.querySelector('.ready-to-cook-container')
 const readyToCookBtn = document.querySelector('.ready-to-cook-btn')
 const readyToCookSection = document.querySelector('.ready-cards')
 const searchBtn = document.querySelector('.search-btn')
-const randomNum = Math.floor(Math.random() * 49 + 1);
+const randomNum = Math.floor(Math.random() * 48 + 1);
 let cardID = [];
 const user = getUser();
 
@@ -43,7 +43,7 @@ readyToCookSection.addEventListener('click', showRecipe);
 readyToCookSection.addEventListener('click', deleteFromFavs);
 searchBtn.addEventListener('click', findRecipe);
 searchBtn.addEventListener('click', findByTag);
-
+searchBtn.addEventListener('click', findByTag);
 
 function toggleMenu() {
   hamburgerBtn.classList.toggle("change")
