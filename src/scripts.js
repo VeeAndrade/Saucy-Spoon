@@ -29,6 +29,8 @@ pantryContainer.addEventListener('click', addQuantity);
 pantryContainer.addEventListener('click', subtractQuantity);
 recipeContainer.addEventListener('click', favoriteRecipe);
 recipeContainer.addEventListener('click', addToCook);
+recipeContainer.addEventListener('click', addRecipeToFavs);
+recipeContainer.addEventListener('click', addRecipeToReadyArr);
 recipeContainer.addEventListener('click', showRecipe);
 navDropDown.addEventListener('click', controlPages);
 favoritesBtn.addEventListener('click', populateFavorites);
@@ -110,6 +112,17 @@ function addRecipeToFavs(event) {
     }
   } else {
     user.removeFromFavorites(id)
+  }
+}
+
+function addRecipeToReadyArr(event) {
+  let id = event.target.parentNode.id
+  if (event.target.classList.contains('cook-btn-active')) {
+    if (!user.recipesToCook.includes(id)) {
+      return user.addToReady(id)
+    }
+  } else {
+    user.removeFromReady(id)
   }
 }
 
@@ -252,9 +265,7 @@ function populateFavorites() {
   favCardSection.innerHTML = ``;
   return user.favoriteRecipes.map(id => {
     let item = recipeData.find(recipe => recipe.id === Number(id))
-    // favoritesContainer.innerHTML = 
     favCardSection.insertAdjacentHTML('beforeend', `
-      <div class="favorited-recipe">
         <div class="favorited-recipe">
           <section class="favorite-recipe-name">
             <h4>${item.name}</h4>
@@ -265,8 +276,6 @@ function populateFavorites() {
                 <button class="remove-from-favorites action-btn">Remove</button>
               </section>
             </div>
-            </div>
-      
     `)
   })
 }
