@@ -173,7 +173,7 @@ function showRecipe(event) {
               let xBtn = document.querySelector('.close-btn');
               xBtn.addEventListener('click', closeRecipe);
               loadIngredients();
-              // loadInstructions();
+              loadInstructions();
       }
     })
   }
@@ -189,7 +189,7 @@ let ingredientList = document.querySelector('.ingredient-list');
   recipeData.forEach(recipe => {
     if (recipe.id === Number(cardID[0])) {
       recipe.ingredients.forEach(ingredient => {
-        ingredientList.insertAdjacentHTML('afterbegin', `
+        ingredientList.insertAdjacentHTML('beforebegin', `
         <p>${ingredient.name} - ${ingredient.quantity.amount} ${ingredient.quantity.unit}</p>`
       )
       })
@@ -202,9 +202,9 @@ let instructionList = document.querySelector('.instructions-container');
   recipeData.forEach(recipe => {
     if (recipe.id === Number(cardID[0])) {
       recipe.instructions.forEach(instruction => {
-        ingredientList.insertAdjacentHTML('afterbegin', `
+        instructionList.insertAdjacentHTML('beforebegin', `
         <p>Step ${instruction.number}</p>
-        <p></p>`
+        <p>${instruction.instruction}</p>`
       )
       })
     }
