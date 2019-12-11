@@ -43,7 +43,9 @@ function populateCards() {
     <div class="recipe-card" id="${recipe.id}">
       <img class="recipe-img" src=${recipe.image}>
     <div class="recipe-card-bar">
-      <p class="recipe-card-name">${recipe.name}</p>
+      <div class="recipe-card-name">
+        <p>${recipe.name}</p>
+      </div>
       <div class='btns-container' id="${recipe.id}">
         <button class="heart-btn"></button>
         <button class="cook-btn"></button>
