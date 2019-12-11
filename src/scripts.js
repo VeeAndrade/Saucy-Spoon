@@ -166,13 +166,14 @@ function showRecipe(event) {
                   </aside>
                   <div class="recipe-instructions">
                     <h3>Instructions</h3>
+                    <div class="instructions-container"></div>
                   </div>
                 </article>
               </div>`)
               let xBtn = document.querySelector('.close-btn');
               xBtn.addEventListener('click', closeRecipe);
               loadIngredients();
-              loadInstructions();
+              // loadInstructions();
       }
     })
   }
@@ -180,10 +181,34 @@ function showRecipe(event) {
 
 function closeRecipe(event) {
   event.target.parentElement.parentElement.remove();
+  cardID.shift();
 }
 
-loadIngredients() {
+function loadIngredients() {
+let ingredientList = document.querySelector('.ingredient-list');
+  recipeData.forEach(recipe => {
+    if (recipe.id === Number(cardID[0])) {
+      recipe.ingredients.forEach(ingredient => {
+        ingredientList.insertAdjacentHTML('afterbegin', `
+        <p>${ingredient.name} - ${ingredient.quantity.amount} ${ingredient.quantity.unit}</p>`
+      )
+      })
+    }
+  })
+}
 
+function loadInstructions() {
+let instructionList = document.querySelector('.instructions-container');
+  recipeData.forEach(recipe => {
+    if (recipe.id === Number(cardID[0])) {
+      recipe.instructions.forEach(instruction => {
+        ingredientList.insertAdjacentHTML('afterbegin', `
+        <p>Step ${instruction.number}</p>
+        <p></p>`
+      )
+      })
+    }
+  })
 }
 
 function populatePantry() {
