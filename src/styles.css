@@ -200,7 +200,10 @@ p, u {
 .favorite-heading {
   display: flex;
   font-size: 2em;
+  height: 5%;
   color: #741717;
+  align-items: center;
+  margin-bottom: .5%;
   justify-content: center;
 }
 
@@ -246,6 +249,29 @@ p, u {
   height: 70%;
   width: 100%;
 
+}
+
+.ready-cover {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  padding-top: 7%;
+  justify-content: center;
+}
+
+.ready-to-cook-cards {
+  background: lightgrey;
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.ready-cards {
+  height: 90%;
+  border: solid black 1px;
 }
 
 .search-wrapper {
