@@ -116,16 +116,16 @@ let recipeData = [
       },
       {
         "number": 6,
-        "instruction": "Remove the pan from the oven and let sit for 10 minutes before removing onto a cooling rack.Top with ice cream and a drizzle of chocolate sauce."
+        "instruction": "Remove the pan from the oven and let sit for 10 minutes before removing onto a cooling rack.Top with ice cream and a drizzle of chocolate Sauce."
       }
     ],
     "tags": [
-      "antipasti",
-      "starter",
-      "snack",
-      "appetizer",
-      "antipasto",
-      "hor d'oeuvre"
+      "Antipasti",
+      "Starter",
+      "Snack",
+      "Appetizer",
+      "Antipasto",
+      "Hor d'oeuvres"
     ]
   },
   {
@@ -214,7 +214,7 @@ let recipeData = [
         }
       },
       {
-        "name": "soy sauce",
+        "name": "soy Sauce",
         "id": 16124,
         "quantity": {
           "amount": 1,
@@ -233,14 +233,14 @@ let recipeData = [
     "instructions": [
       {
         "number": 1,
-        "instruction": "Season the pork chops with salt and pepper and grill or pan fry over medium high heat until cooked, about 3-5 minutes per side. (If grilling, baste the chops in the maple dijon apple cider sauce as you grill.)Meanwhile, mix the remaining ingredients except the apple slices, bring to a simmer and cook until the sauce thickens, about 2-5 minutes.Grill or saute the apple slices until just tender but still crisp.Toss the pork chops and apple slices in the maple dijon apple cider sauce and enjoy!"
+        "instruction": "Season the pork chops with salt and pepper and grill or pan fry over medium high heat until cooked, about 3-5 minutes per side. (If grilling, baste the chops in the maple dijon apple cider Sauce as you grill.)Meanwhile, mix the remaining ingredients except the apple slices, bring to a simmer and cook until the Sauce thickens, about 2-5 minutes.Grill or saute the apple slices until just tender but still crisp.Toss the pork chops and apple slices in the maple dijon apple cider Sauce and enjoy!"
       }
     ],
     "tags": [
-      "lunch",
-      "main course",
-      "main dish",
-      "dinner"
+      "Lunch",
+      "Main Course",
+      "Main Dish",
+      "Dinner"
     ]
   },
   {
@@ -313,7 +313,7 @@ let recipeData = [
         }
       },
       {
-        "name": "hot sauce",
+        "name": "hot Sauce",
         "id": 6168,
         "quantity": {
           "amount": 8,
@@ -356,11 +356,11 @@ let recipeData = [
     "instructions": [
       {
         "number": 1,
-        "instruction": "Mix the hot sauce, butter, mango habanero sauce, brown sugar, chili powder, garlic powder, onion powder, black pepper, cayenne pepper and seasoning salt in a bowl. Stir vigorously until completely combined."
+        "instruction": "Mix the hot Sauce, butter, mango habanero Sauce, brown sugar, chili powder, garlic powder, onion powder, black pepper, cayenne pepper and seasoning salt in a bowl. Stir vigorously until completely combined."
       }
     ],
     "tags": [
-      "sauce"
+      "Sauce"
     ]
   },
   {
@@ -492,11 +492,11 @@ let recipeData = [
       },
       {
         "number": 7,
-        "instruction": "Once completed, spread peanut butter on a pancake, layer it with sliced bananas and drizzle it with honey. Top the pancake with another pancake to form a sandwich. Repeat with remaining pancakes and serve with extra honey."
+        "instruction": "Once completed, Spread peanut butter on a pancake, layer it with sliced bananas and drizzle it with honey. Top the pancake with another pancake to form a sandwich. Repeat with remaining pancakes and serve with extra honey."
       }
     ],
     "tags": [
-      "side dish"
+      "Side Dish"
     ]
   },
   {
@@ -656,7 +656,7 @@ let recipeData = [
       },
       {
         "number": 6,
-        "instruction": "Add dough batter to prepared pan and distribute and smooth the top using a rubber spatula. You'll want to meet all sides of the pan. If you miss the corners that will still be okay. It will fill in upon rising. To even out top, drop a few drops of filtered water on top, and spread evenly with a rubber spatula, or dip spatula in water several times."
+        "instruction": "Add dough batter to prepared pan and distribute and smooth the top using a rubber spatula. You'll want to meet all sides of the pan. If you miss the corners that will still be okay. It will fill in upon rising. To even out top, drop a few drops of filtered water on top, and Spread evenly with a rubber spatula, or Dip spatula in water several times."
       },
       {
         "number": 7,
@@ -778,7 +778,7 @@ let recipeData = [
       }
     ],
     "tags": [
-      "side dish"
+      "Side Dish"
     ]
   },
   {
@@ -910,7 +910,7 @@ let recipeData = [
       }
     ],
     "tags": [
-      "side dish"
+      "Side Dish"
     ]
   },
   {
@@ -1002,12 +1002,12 @@ let recipeData = [
       }
     ],
     "tags": [
-      "antipasti",
-      "starter",
-      "snack",
-      "appetizer",
-      "antipasto",
-      "hor d'oeuvre"
+      "Antipasti",
+      "Starter",
+      "Snack",
+      "Appetizer",
+      "Antipasto",
+      "Hor d'oeuvres"
     ]
   },
   {
@@ -1104,7 +1104,7 @@ let recipeData = [
         }
       },
       {
-        "name": "soy sauce",
+        "name": "soy Sauce",
         "id": 16124,
         "quantity": {
           "amount": 1,
@@ -1120,7 +1120,7 @@ let recipeData = [
         }
       },
       {
-        "name": "sriracha sauce",
+        "name": "sriracha Sauce",
         "id": 1016168,
         "quantity": {
           "amount": 1,
@@ -1131,7 +1131,7 @@ let recipeData = [
     "instructions": [
       {
         "number": 1,
-        "instruction": "Prepare the chicken: In a large bowl, whisk together the brown sugar, ginger, oil, soy sauce, Sriracha and peanut butter."
+        "instruction": "Prepare the chicken: In a large bowl, whisk together the brown sugar, ginger, oil, soy Sauce, Sriracha and peanut butter."
       },
       {
         "number": 2,
@@ -1147,7 +1147,7 @@ let recipeData = [
       },
       {
         "number": 5,
-        "instruction": "Remove the pan from the oven and spread pineapple on the remaining space on the pan. Sprinkle the pineapple with 1 tablespoon brown sugar. Broil for 3 to 5 minutes or until chicken is browned and no longer pink inside."
+        "instruction": "Remove the pan from the oven and Spread pineapple on the remaining space on the pan. Sprinkle the pineapple with 1 tablespoon brown sugar. Broil for 3 to 5 minutes or until chicken is browned and no longer pink inside."
       },
       {
         "number": 6,
@@ -1159,14 +1159,14 @@ let recipeData = [
       },
       {
         "number": 8,
-        "instruction": "Add the broiled pineapple, lime juice, oil, soy sauce and Sriracha; toss to coat. Divide among the plates with the chicken and sprinkle the slaw with mint or basil."
+        "instruction": "Add the broiled pineapple, lime juice, oil, soy Sauce and Sriracha; toss to coat. Divide among the plates with the chicken and sprinkle the slaw with mint or basil."
       }
     ],
     "tags": [
-      "lunch",
-      "main course",
-      "main dish",
-      "dinner"
+      "Lunch",
+      "Main Course",
+      "Main Dish",
+      "Dinner"
     ]
   },
   {
@@ -1286,11 +1286,11 @@ let recipeData = [
       },
       {
         "number": 2,
-        "instruction": "Add onion, garlic, salt and pepper to a medium saucepan. Cook over medium heat for one or two minutes, until fragrant and slightly softened.Throw the cauliflower florets in and continue cooking for a minute or two."
+        "instruction": "Add onion, garlic, salt and pepper to a medium Saucepan. Cook over medium heat for one or two minutes, until fragrant and slightly softened.Throw the cauliflower florets in and continue cooking for a minute or two."
       },
       {
         "number": 3,
-        "instruction": "Add chicken stock, cover and bring to the boil; lower heat and continue cooking until the cauliflower is tender, about 5-7 minutes.Ladle the cauliflower mixture into your blender; add ghee, Dijon mustard and nutritional yeast and process on high speed until super smooth and silky in consistency. Set aside. Steam the rapini for 30 seconds to a minute, until slightly softened and bright green. In a small skillet, dry roast the hazelnuts over medium heat until they become fragrant and take a nice golden coloration. Slice the hard boiled eggs and add them to a large mixing bowl, followed by “Bechamel” sauce, rapini and three quarters of the hazelnuts."
+        "instruction": "Add chicken stock, cover and bring to the boil; lower heat and continue cooking until the cauliflower is tender, about 5-7 minutes.Ladle the cauliflower mixture into your blender; add ghee, Dijon mustard and nutritional yeast and process on high speed until super smooth and silky in consistency. Set aside. Steam the rapini for 30 seconds to a minute, until slightly softened and bright green. In a small skillet, dry roast the hazelnuts over medium heat until they become fragrant and take a nice golden coloration. Slice the hard boiled eggs and add them to a large mixing bowl, followed by “Bechamel” Sauce, rapini and three quarters of the hazelnuts."
       },
       {
         "number": 4,
@@ -1298,10 +1298,10 @@ let recipeData = [
       }
     ],
     "tags": [
-      "lunch",
-      "main course",
-      "main dish",
-      "dinner"
+      "Lunch",
+      "Main Course",
+      "Main Dish",
+      "Dinner"
     ]
   },
   {
@@ -1310,7 +1310,7 @@ let recipeData = [
     "image": "https://chowhound1.cbsistatic.com/assets/2014/09/30356_slow_cooker_pork_3000x2000.jpg",
     "ingredients": [
       {
-        "name": "bbq sauce",
+        "name": "bbq Sauce",
         "id": 6150,
         "quantity": {
           "amount": 1,
@@ -1382,7 +1382,7 @@ let recipeData = [
         }
       },
       {
-        "name": "worcestershire sauce",
+        "name": "worcestershire Sauce",
         "id": 6971,
         "quantity": {
           "amount": 2,
@@ -1393,7 +1393,7 @@ let recipeData = [
     "instructions": [
       {
         "number": 1,
-        "instruction": "Combine 1 cup chicken broth, 1 cup BBQ sauce, 3 tbsp liquid smoke, 2 tbsp Worcestershire sauce, 3 pressed garlic cloves, 2 tbsp brown sugar and stir to combine.Generously sprinkle the pork roast with salt, pepper and paprika.Rub the seasoning into the pork shoulder.Chop 1 large onion and place it into the bottom of the slow cooker."
+        "instruction": "Combine 1 cup chicken broth, 1 cup BBQ Sauce, 3 tbsp liquid smoke, 2 tbsp Worcestershire Sauce, 3 pressed garlic cloves, 2 tbsp brown sugar and stir to combine.Generously sprinkle the pork roast with salt, pepper and paprika.Rub the seasoning into the pork shoulder.Chop 1 large onion and place it into the bottom of the slow cooker."
       },
       {
         "number": 2,
@@ -1405,7 +1405,7 @@ let recipeData = [
       },
       {
         "number": 4,
-        "instruction": "Remove the meat to a large bowl and shred. This meat is fall-apart tender! The marinade enhances the natural flavors of the pork. When you're done shredding the pork, pour as much of the remaining sauce over the pork as you like."
+        "instruction": "Remove the meat to a large bowl and shred. This meat is fall-apart tender! The marinade enhances the natural flavors of the pork. When you're done shredding the pork, pour as much of the remaining Sauce over the pork as you like."
       },
       {
         "number": 5,
@@ -1413,10 +1413,10 @@ let recipeData = [
       }
     ],
     "tags": [
-      "lunch",
-      "main course",
-      "main dish",
-      "dinner"
+      "Lunch",
+      "Main Course",
+      "Main Dish",
+      "Dinner"
     ]
   },
   {
@@ -1504,9 +1504,9 @@ let recipeData = [
       }
     ],
     "tags": [
-      "morning meal",
-      "brunch",
-      "breakfast"
+      "Morning Meal",
+      "Brunch",
+      "Breakfast"
     ]
   },
   {
@@ -1638,7 +1638,7 @@ let recipeData = [
       }
     ],
     "tags": [
-      "side dish"
+      "Side Dish"
     ]
   },
   {
@@ -1726,10 +1726,10 @@ let recipeData = [
       }
     ],
     "tags": [
-      "lunch",
-      "main course",
-      "main dish",
-      "dinner"
+      "Lunch",
+      "Main Course",
+      "Main Dish",
+      "Dinner"
     ]
   },
   {
@@ -1853,13 +1853,13 @@ let recipeData = [
       }
     ],
     "tags": [
-      "side dish",
-      "antipasti",
-      "starter",
-      "snack",
-      "appetizer",
-      "antipasto",
-      "hor d'oeuvre"
+      "Side Dish",
+      "Antipasti",
+      "Starter",
+      "Snack",
+      "Appetizer",
+      "Antipasto",
+      "Hor d'oeuvres"
     ]
   },
   {
@@ -2011,7 +2011,7 @@ let recipeData = [
       },
       {
         "number": 10,
-        "instruction": "Place powdered sugar in bowl.Dip each cookie in chocolate and using a fork remove cookie, tapping off excess chocolate. You don't need a lot of chocolate coating on the cookies.Immediately dip the cookie into the powdered sugar and toss to coat completely."
+        "instruction": "Place powdered sugar in bowl.Dip each cookie in chocolate and using a fork remove cookie, tapping off excess chocolate. You don't need a lot of chocolate coating on the cookies.Immediately Dip the cookie into the powdered sugar and toss to coat completely."
       },
       {
         "number": 11,
@@ -2019,7 +2019,7 @@ let recipeData = [
       }
     ],
     "tags": [
-      "side dish"
+      "Side Dish"
     ]
   },
   {
@@ -2135,7 +2135,7 @@ let recipeData = [
     "instructions": [
       {
         "number": 1,
-        "instruction": "Place potatoes in a large saucepan and add water to cover by 1 inch. Bring to boil over medium-high heat."
+        "instruction": "Place potatoes in a large Saucepan and add water to cover by 1 inch. Bring to boil over medium-high heat."
       },
       {
         "number": 2,
@@ -2155,11 +2155,11 @@ let recipeData = [
       },
       {
         "number": 6,
-        "instruction": "Add more salt and pepper to taste.Cover and refrigerate until chilled, about 1 hour before serving. Potato salad can be made up to one day ahead."
+        "instruction": "Add more salt and pepper to taste.Cover and refrigerate until chilled, about 1 hour before serving. Potato Salad can be made up to one day ahead."
       }
     ],
     "tags": [
-      "salad"
+      "Salad"
     ]
   },
   {
@@ -2232,7 +2232,7 @@ let recipeData = [
         }
       },
       {
-        "name": "pizza sauce",
+        "name": "pizza Sauce",
         "id": 11549,
         "quantity": {
           "amount": 14,
@@ -2251,11 +2251,11 @@ let recipeData = [
       },
       {
         "number": 3,
-        "instruction": "Add sausage, onions, rice, Parmesan, garlic, oregano, 1-1/2 cups pizza sauce and 1-1/4 cups shredded cheese; mix lightly.  Spoon into pepper shells."
+        "instruction": "Add sausage, onions, rice, Parmesan, garlic, oregano, 1-1/2 cups pizza Sauce and 1-1/4 cups shredded cheese; mix lightly.  Spoon into pepper shells."
       },
       {
         "number": 4,
-        "instruction": "Stand peppers in slow cooker; top with remaining sauce and shredded cheese.  Cover with lid."
+        "instruction": "Stand peppers in slow cooker; top with remaining Sauce and shredded cheese.  Cover with lid."
       },
       {
         "number": 5,
@@ -2263,7 +2263,7 @@ let recipeData = [
       }
     ],
     "tags": [
-      "side dish"
+      "Side Dish"
     ]
   },
   {
@@ -2399,12 +2399,12 @@ let recipeData = [
       }
     ],
     "tags": [
-      "antipasti",
-      "starter",
-      "snack",
-      "appetizer",
-      "antipasto",
-      "hor d'oeuvre"
+      "Antipasti",
+      "Starter",
+      "Snack",
+      "Appetizer",
+      "Antipasto",
+      "Hor d'oeuvres"
     ]
   },
   {
@@ -2508,7 +2508,7 @@ let recipeData = [
       }
     ],
     "tags": [
-      "side dish"
+      "Side Dish"
     ]
   },
   {
@@ -2576,7 +2576,7 @@ let recipeData = [
     "instructions": [
       {
         "number": 1,
-        "instruction": "Whisk together brown sugar, cornstarch, and 1/4 teaspoon salt in a heavy medium saucepan, then whisk in milk and cream. Bring to a boil over medium heat, whisking frequently, then boil, whisking, 1 minute."
+        "instruction": "Whisk together brown sugar, cornstarch, and 1/4 teaspoon salt in a heavy medium Saucepan, then whisk in milk and cream. Bring to a boil over medium heat, whisking frequently, then boil, whisking, 1 minute."
       },
       {
         "number": 2,
@@ -2588,7 +2588,7 @@ let recipeData = [
       }
     ],
     "tags": [
-      "side dish"
+      "Side Dish"
     ]
   },
   {
@@ -2668,7 +2668,7 @@ let recipeData = [
       },
       {
         "number": 2,
-        "instruction": "Place the rinsed quinoa in a pot with 1.75 cups of water. Put a lid on top, bring it to a boil, then reduce the heat to low and let simmer for 15 minutes. After 15 minutes, turn off the heat. Allow the quinoa to cool before making the salad or else the heat will wilt the parsley and vegetables. To cool it faster, spread it out on a baking sheet and place in the refrigerator for 30 minutes.While the quinoa is cooling, prepare the rest of the salad."
+        "instruction": "Place the rinsed quinoa in a pot with 1.75 cups of water. Put a lid on top, bring it to a boil, then reduce the heat to low and let simmer for 15 minutes. After 15 minutes, turn off the heat. Allow the quinoa to cool before making the Salad or else the heat will wilt the parsley and vegetables. To cool it faster, Spread it out on a baking sheet and place in the refrigerator for 30 minutes.While the quinoa is cooling, prepare the rest of the Salad."
       },
       {
         "number": 3,
@@ -2680,7 +2680,7 @@ let recipeData = [
       }
     ],
     "tags": [
-      "side dish"
+      "Side Dish"
     ]
   },
   {
@@ -2752,11 +2752,11 @@ let recipeData = [
       },
       {
         "number": 2,
-        "instruction": "Pour the soda, juice, and cream into a medium saucepan and sprinkle the gelatin on top. Allow the gelatin to soak for 2-3 minutes, then begin to heat on low, stirring constantly until gelatin is fully dissolved (about 5 minutes)."
+        "instruction": "Pour the soda, juice, and cream into a medium Saucepan and sprinkle the gelatin on top. Allow the gelatin to soak for 2-3 minutes, then begin to heat on low, stirring constantly until gelatin is fully dissolved (about 5 minutes)."
       },
       {
         "number": 3,
-        "instruction": "Remove saucepan from heat and add vodka and food coloring."
+        "instruction": "Remove Saucepan from heat and add vodka and food coloring."
       },
       {
         "number": 4,
@@ -2768,12 +2768,12 @@ let recipeData = [
       }
     ],
     "tags": [
-      "antipasti",
-      "starter",
-      "snack",
-      "appetizer",
-      "antipasto",
-      "hor d'oeuvre"
+      "Antipasti",
+      "Starter",
+      "Snack",
+      "Appetizer",
+      "Antipasto",
+      "Hor d'oeuvres"
     ]
   },
   {
@@ -2885,7 +2885,7 @@ let recipeData = [
       },
       {
         "number": 2,
-        "instruction": "Place the mushrooms open side up on a baking sheet. Use a small disher or spoon to place a heaping scoop of dip mixture into each mushroom, pressing it down to make sure it fills the opening. Press a small amount of feta cheese on top of each stuffed mushroom."
+        "instruction": "Place the mushrooms open side up on a baking sheet. Use a small disher or spoon to place a heaping scoop of Dip mixture into each mushroom, pressing it down to make sure it fills the opening. Press a small amount of feta cheese on top of each stuffed mushroom."
       },
       {
         "number": 3,
@@ -2893,9 +2893,9 @@ let recipeData = [
       }
     ],
     "tags": [
-      "condiment",
-      "dip",
-      "spread"
+      "Condiment",
+      "Dip",
+      "Spread"
     ]
   },
   {
@@ -2952,7 +2952,7 @@ let recipeData = [
         }
       },
       {
-        "name": "marinara sauce",
+        "name": "marinara Sauce",
         "id": 10111549,
         "quantity": {
           "amount": 26,
@@ -3043,11 +3043,11 @@ let recipeData = [
       },
       {
         "number": 3,
-        "instruction": "For the fonduta sauce: In a medium heavy-bottomed saucepan, bring the milk and cream to a simmer over medium heat. Reduce the heat to low."
+        "instruction": "For the fonduta Sauce: In a medium heavy-bottomed Saucepan, bring the milk and cream to a simmer over medium heat. Reduce the heat to low."
       },
       {
         "number": 4,
-        "instruction": "Add the Pecorino Romano and whisk until the cheese is melted and the sauce is smooth."
+        "instruction": "Add the Pecorino Romano and whisk until the cheese is melted and the Sauce is smooth."
       },
       {
         "number": 5,
@@ -3071,7 +3071,7 @@ let recipeData = [
       },
       {
         "number": 10,
-        "instruction": "Add the peas, ricotta, and 1 cup of the fonduta sauce. Season with remaining 1/2 teaspoon kosher salt and 1/4 teaspoon pepper."
+        "instruction": "Add the peas, ricotta, and 1 cup of the fonduta Sauce. Season with remaining 1/2 teaspoon kosher salt and 1/4 teaspoon pepper."
       },
       {
         "number": 11,
@@ -3087,11 +3087,11 @@ let recipeData = [
       },
       {
         "number": 14,
-        "instruction": "Spread half of the marinara sauce over the bottom of the prepared baking dish. Using a small spoon, fill the manicotti shells with the sausage filling and arrange in a single layer in the baking dish."
+        "instruction": "Spread half of the marinara Sauce over the bottom of the prepared baking dish. Using a small spoon, fill the manicotti shells with the sausage filling and arrange in a single layer in the baking dish."
       },
       {
         "number": 15,
-        "instruction": "Pour the remaining marinara sauce on top of the filled shells. Spoon the remaining fonduta sauce on top and sprinkle with the mozzarella."
+        "instruction": "Pour the remaining marinara Sauce on top of the filled shells. Spoon the remaining fonduta Sauce on top and sprinkle with the mozzarella."
       },
       {
         "number": 16,
@@ -3099,10 +3099,10 @@ let recipeData = [
       }
     ],
     "tags": [
-      "lunch",
-      "main course",
-      "main dish",
-      "dinner"
+      "Lunch",
+      "Main Course",
+      "Main Dish",
+      "Dinner"
     ]
   },
   {
@@ -3222,10 +3222,10 @@ let recipeData = [
       }
     ],
     "tags": [
-      "lunch",
-      "main course",
-      "main dish",
-      "dinner"
+      "Lunch",
+      "Main Course",
+      "Main Dish",
+      "Dinner"
     ]
   },
   {
@@ -3297,15 +3297,15 @@ let recipeData = [
       },
       {
         "number": 2,
-        "instruction": "Add 1 teaspoon sugar to each cup and swirl to coat the inside. Distribute raspberries in the bottom of the cups and sprinkle each with 1 teaspoon crme de cassis (or eau-de-vie, juice or nectar).To prepare souffls: Stir raspberries in a saucepan over low heat until they are juicy (for fresh) or thawed (for frozen)."
+        "instruction": "Add 1 teaspoon sugar to each cup and swirl to coat the inside. Distribute raspberries in the bottom of the cups and sprinkle each with 1 teaspoon crme de cassis (or eau-de-vie, juice or nectar).To prepare souffls: Stir raspberries in a Saucepan over low heat until they are juicy (for fresh) or thawed (for frozen)."
       },
       {
         "number": 3,
-        "instruction": "Transfer to a fine sieve set over a bowl. With a spoon, press the berries through the sieve, being careful to extract all the pulp. Discard the seeds.Return the puree to the saucepan. Bring to a simmer and stir over medium heat until very thick and reduced to 1/4 cup, about 10 minutes. (Reduce the heat as the mixture thickens.) Stir in 1 tablespoon crme de cassis (or eau-de-vie, juice or nectar) and set aside to cool slightly.Beat egg whites and salt in a mixing bowl with an electric mixer on high speed until soft peaks form. Continuing to beat, gradually add sugar and beat until stiff peaks form. With a rubber spatula, fold about a fourth of the beaten whites into the reserved raspberry puree to lighten its texture, then pour the mixture over the remaining whites. Gently fold the puree and whites together until evenly blended. Spoon the souffl mixture into the cups, spreading to the edges of the cups.Set the cups on a baking sheet and bake for 10 minutes, or until lightly browned on the top. Dust with confectioners sugar and serve immediately."
+        "instruction": "Transfer to a fine sieve set over a bowl. With a spoon, press the berries through the sieve, being careful to extract all the pulp. Discard the seeds.Return the puree to the Saucepan. Bring to a simmer and stir over medium heat until very thick and reduced to 1/4 cup, about 10 minutes. (Reduce the heat as the mixture thickens.) Stir in 1 tablespoon crme de cassis (or eau-de-vie, juice or nectar) and set aside to cool slightly.Beat egg whites and salt in a mixing bowl with an electric mixer on high speed until soft peaks form. Continuing to beat, gradually add sugar and beat until stiff peaks form. With a rubber spatula, fold about a fourth of the beaten whites into the reserved raspberry puree to lighten its texture, then pour the mixture over the remaining whites. Gently fold the puree and whites together until evenly blended. Spoon the souffl mixture into the cups, Spreading to the edges of the cups.Set the cups on a baking sheet and bake for 10 minutes, or until lightly browned on the top. Dust with confectioners sugar and serve immediately."
       }
     ],
     "tags": [
-      "side dish"
+      "Side Dish"
     ]
   },
   {
@@ -3433,12 +3433,12 @@ let recipeData = [
       }
     ],
     "tags": [
-      "antipasti",
-      "starter",
-      "snack",
-      "appetizer",
-      "antipasto",
-      "hor d'oeuvre"
+      "Antipasti",
+      "Starter",
+      "Snack",
+      "Appetizer",
+      "Antipasto",
+      "Hor d'oeuvres"
     ]
   },
   {
@@ -3546,7 +3546,7 @@ let recipeData = [
       }
     ],
     "tags": [
-      "salad"
+      "Salad"
     ]
   },
   {
@@ -3638,7 +3638,7 @@ let recipeData = [
       }
     ],
     "tags": [
-      "side dish"
+      "Side Dish"
     ]
   },
   {
@@ -3818,7 +3818,7 @@ let recipeData = [
       },
       {
         "number": 9,
-        "instruction": "Mix 2 t garlic powder in the butter and spread thinly over the dough."
+        "instruction": "Mix 2 t garlic powder in the butter and Spread thinly over the dough."
       },
       {
         "number": 10,
@@ -3830,12 +3830,12 @@ let recipeData = [
       }
     ],
     "tags": [
-      "antipasti",
-      "starter",
-      "snack",
-      "appetizer",
-      "antipasto",
-      "hor d'oeuvre"
+      "Antipasti",
+      "Starter",
+      "Snack",
+      "Appetizer",
+      "Antipasto",
+      "Hor d'oeuvres"
     ]
   },
   {
@@ -3907,7 +3907,7 @@ let recipeData = [
       }
     ],
     "tags": [
-      "side dish"
+      "Side Dish"
     ]
   },
   {
@@ -3924,7 +3924,7 @@ let recipeData = [
         }
       },
       {
-        "name": "bbq sauce",
+        "name": "bbq Sauce",
         "id": 6150,
         "quantity": {
           "amount": 0.25,
@@ -3979,11 +3979,11 @@ let recipeData = [
       },
       {
         "number": 4,
-        "instruction": "Add the black pepper, hummus, hot sauce and mustard and stir together until well combined and mostly smooth. Spoon or pipe this filling back into the hollows of the egg whites. Sprinkle paprika over the tops of the eggs and serve."
+        "instruction": "Add the black pepper, hummus, hot Sauce and mustard and stir together until well combined and mostly smooth. Spoon or pipe this filling back into the hollows of the egg whites. Sprinkle paprika over the tops of the eggs and serve."
       }
     ],
     "tags": [
-      "side dish"
+      "Side Dish"
     ]
   },
   {
@@ -4087,7 +4087,7 @@ let recipeData = [
       }
     ],
     "tags": [
-      "side dish"
+      "Side Dish"
     ]
   },
   {
@@ -4163,7 +4163,7 @@ let recipeData = [
       }
     ],
     "tags": [
-      "side dish"
+      "Side Dish"
     ]
   },
   {
@@ -4279,7 +4279,7 @@ let recipeData = [
       }
     ],
     "tags": [
-      "salad"
+      "Salad"
     ]
   },
   {
@@ -4388,19 +4388,19 @@ let recipeData = [
       {
         "number": 5,
         "instruction": "Serve hot over cornbread with shredded cheese and sour cream."
-      } 
+      }
     ],
     "tags": [
-      "side dish"
+      "Side Dish"
     ]
   },
   {
     "name": "Barbecue Shrimp Stir-Fry",
     "id": 445196,
-    "image": "https://media3.s-nbcnews.com/j/newscms/2019_21/2863871/190520-grilled-shrimp-summer-harvest-salad-cs-115p_1353a4f367bccd24748faf7eac15a1d1.fit-760w.jpg",
+    "image": "https://media3.s-nbcnews.com/j/newscms/2019_21/2863871/190520-grilled-shrimp-summer-harvest-Salad-cs-115p_1353a4f367bccd24748faf7eac15a1d1.fit-760w.jpg",
     "ingredients": [
       {
-        "name": "barbecue sauce",
+        "name": "barbecue Sauce",
         "id": 6150,
         "quantity": {
           "amount": 0.5,
@@ -4479,7 +4479,7 @@ let recipeData = [
       },
       {
         "number": 2,
-        "instruction": "Combine the barbecue sauce, honey, basil, garlic powder and pepper; pour over vegetables. Bring to a boil over medium-high heat, stirring constantly."
+        "instruction": "Combine the barbecue Sauce, honey, basil, garlic powder and pepper; pour over vegetables. Bring to a boil over medium-high heat, stirring constantly."
       },
       {
         "number": 3,
@@ -4491,10 +4491,10 @@ let recipeData = [
       }
     ],
     "tags": [
-      "lunch",
-      "main course",
-      "main dish",
-      "dinner"
+      "Lunch",
+      "Main Course",
+      "Main Dish",
+      "Dinner"
     ]
   },
   {
@@ -4598,7 +4598,7 @@ let recipeData = [
       },
       {
         "number": 2,
-        "instruction": "Heat oil in saucepan over medium-high heat."
+        "instruction": "Heat oil in Saucepan over medium-high heat."
       },
       {
         "number": 3,
@@ -4626,7 +4626,7 @@ let recipeData = [
       }
     ],
     "tags": [
-      "side dish"
+      "Side Dish"
     ]
   },
   {
@@ -4738,10 +4738,10 @@ let recipeData = [
       }
     ],
     "tags": [
-      "lunch",
-      "main course",
-      "main dish",
-      "dinner"
+      "Lunch",
+      "Main Course",
+      "Main Dish",
+      "Dinner"
     ]
   },
   {
@@ -4854,7 +4854,7 @@ let recipeData = [
         }
       },
       {
-        "name": "sweet chili sauce",
+        "name": "sweet chili Sauce",
         "id": 98962,
         "quantity": {
           "amount": 2,
@@ -4865,7 +4865,7 @@ let recipeData = [
     "instructions": [
       {
         "number": 1,
-        "instruction": "In a bowl, whisk together the mayo, chili sauce and sriracha, then set it aside until ready to use.Toss the shrimp with the cornstarch until evenly coated."
+        "instruction": "In a bowl, whisk together the mayo, chili Sauce and sriracha, then set it aside until ready to use.Toss the shrimp with the cornstarch until evenly coated."
       },
       {
         "number": 2,
@@ -4881,10 +4881,10 @@ let recipeData = [
       }
     ],
     "tags": [
-      "lunch",
-      "main course",
-      "main dish",
-      "dinner"
+      "Lunch",
+      "Main Course",
+      "Main Dish",
+      "Dinner"
     ]
   },
   {
@@ -4968,7 +4968,7 @@ let recipeData = [
     "instructions": [
       {
         "number": 1,
-        "instruction": "Preheat the oven to 350F.Spray baking sheets with cooking spray or spread a thin layer of olive oil over them."
+        "instruction": "Preheat the oven to 350F.Spray baking sheets with cooking spray or Spread a thin layer of olive oil over them."
       },
       {
         "number": 2,
@@ -4992,12 +4992,12 @@ let recipeData = [
       }
     ],
     "tags": [
-      "antipasti",
-      "starter",
-      "snack",
-      "appetizer",
-      "antipasto",
-      "hor d'oeuvre"
+      "Antipasti",
+      "Starter",
+      "Snack",
+      "Appetizer",
+      "Antipasto",
+      "Hor d'oeuvres"
     ]
   },
   {
@@ -5109,7 +5109,7 @@ let recipeData = [
       }
     ],
     "tags": [
-      "salad"
+      "Salad"
     ]
   },
   {
@@ -5257,10 +5257,10 @@ let recipeData = [
       }
     ],
     "tags": [
-      "lunch",
-      "main course",
-      "main dish",
-      "dinner"
+      "Lunch",
+      "Main Course",
+      "Main Dish",
+      "Dinner"
     ]
   },
   {
@@ -5364,7 +5364,7 @@ let recipeData = [
       },
       {
         "number": 4,
-        "instruction": "Place the Rolos evenly onto the cookie dough. Using a small cookie scoop, evenly distribute the rest of the cookie dough on top of the Rolos. There is need to spread evenly over the Rolos, this will happen naturally during the baking process."
+        "instruction": "Place the Rolos evenly onto the cookie dough. Using a small cookie scoop, evenly distribute the rest of the cookie dough on top of the Rolos. There is need to Spread evenly over the Rolos, this will happen naturally during the baking process."
       },
       {
         "number": 5,
@@ -5376,7 +5376,7 @@ let recipeData = [
       }
     ],
     "tags": [
-      "side dish"
+      "Side Dish"
     ]
   },
   {
@@ -5409,7 +5409,7 @@ let recipeData = [
         }
       },
       {
-        "name": "hot sauce",
+        "name": "hot Sauce",
         "id": 6168,
         "quantity": {
           "amount": 2,
@@ -5436,11 +5436,11 @@ let recipeData = [
     "instructions": [
       {
         "number": 1,
-        "instruction": "Place chicken in a 3-qt. slow cooker. Toss with 2 tablespoons hot sauce and pepper; cook, covered, on low until tender, 3-4 hours."
+        "instruction": "Place chicken in a 3-qt. slow cooker. Toss with 2 tablespoons hot Sauce and pepper; cook, covered, on low until tender, 3-4 hours."
       },
       {
         "number": 2,
-        "instruction": "Remove chicken; discard cooking juices. In a small saucepan, combine butter, honey and remaining hot sauce; cook and stir over medium heat until blended. Shred chicken with two forks; stir into sauce and heat through."
+        "instruction": "Remove chicken; discard cooking juices. In a small Saucepan, combine butter, honey and remaining hot Sauce; cook and stir over medium heat until blended. Shred chicken with two forks; stir into Sauce and heat through."
       },
       {
         "number": 3,
@@ -5448,10 +5448,10 @@ let recipeData = [
       }
     ],
     "tags": [
-      "lunch",
-      "main course",
-      "main dish",
-      "dinner"
+      "Lunch",
+      "Main Course",
+      "Main Dish",
+      "Dinner"
     ]
   },
   {
@@ -5559,16 +5559,16 @@ let recipeData = [
       },
       {
         "number": 5,
-        "instruction": "Let cool for 5 minutes before transferring cookies to a wire rack to cool completely.Note: Cookies will not spread much at all and will look like they are not done baking. But I promise they are! Once they finish cooling, the cookie and chocolate will become firm and you will have a magically soft and crumbly cookie!"
+        "instruction": "Let cool for 5 minutes before transferring cookies to a wire rack to cool completely.Note: Cookies will not Spread much at all and will look like they are not done baking. But I promise they are! Once they finish cooling, the cookie and chocolate will become firm and you will have a magically soft and crumbly cookie!"
       }
     ],
     "tags": [
-      "antipasti",
-      "starter",
-      "snack",
-      "appetizer",
-      "antipasto",
-      "hor d'oeuvre"
+      "Antipasti",
+      "Starter",
+      "Snack",
+      "Appetizer",
+      "Antipasto",
+      "Hor d'oeuvres"
     ]
   },
   {
@@ -5628,7 +5628,7 @@ let recipeData = [
     "instructions": [
       {
         "number": 1,
-        "instruction": "Saute the zucchini in the olive oil on high heat. Season generously with salt and pepper. Stir and leave alone for a little while, so you get a little bit of texture from the browning on the zucchini.While you’re sauteing, toast the flatbread in the oven at 400 degrees.When the zucchini is soft and just slightly browned, remove from the heat. Take the flatbread out of the oven and spread the zucchini on the flatbread.Top with the fresh tomatoes, cheese, and fresh basil."
+        "instruction": "Saute the zucchini in the olive oil on high heat. Season generously with salt and pepper. Stir and leave alone for a little while, so you get a little bit of texture from the browning on the zucchini.While you’re sauteing, toast the flatbread in the oven at 400 degrees.When the zucchini is soft and just slightly browned, remove from the heat. Take the flatbread out of the oven and Spread the zucchini on the flatbread.Top with the fresh tomatoes, cheese, and fresh basil."
       },
       {
         "number": 2,
@@ -5636,7 +5636,7 @@ let recipeData = [
       }
     ],
     "tags": [
-      "side dish"
+      "Side Dish"
     ]
   },
   {
@@ -5645,7 +5645,7 @@ let recipeData = [
     "image": "https://spoonacular.com/recipeImages/226562-556x370.jpg",
     "ingredients": [
       {
-        "name": "apple sauce",
+        "name": "apple Sauce",
         "id": 9019,
         "quantity": {
           "amount": 2,
@@ -5808,7 +5808,7 @@ let recipeData = [
       },
       {
         "number": 5,
-        "instruction": "Add the carrots, bell pepper and garlic. Cook for about 3 minutes more. Set aside.When the lentils are ready mash them slightly with a potato masher or a fork.Preheat the oven to 350º F.In a large bowl, mix the onion mixture, mashed lentils, apple sauce, cranberries, pistachios, bread crumbs, cilantro, chili powder, cumin, thyme, salt and pepper.Line a loaf pan with parchment paper."
+        "instruction": "Add the carrots, bell pepper and garlic. Cook for about 3 minutes more. Set aside.When the lentils are ready mash them slightly with a potato masher or a fork.Preheat the oven to 350º F.In a large bowl, mix the onion mixture, mashed lentils, apple Sauce, cranberries, pistachios, bread crumbs, cilantro, chili powder, cumin, thyme, salt and pepper.Line a loaf pan with parchment paper."
       },
       {
         "number": 6,
@@ -5816,7 +5816,7 @@ let recipeData = [
       },
       {
         "number": 7,
-        "instruction": "Mix the glaze ingredients in a small bowl and spread evenly over the top."
+        "instruction": "Mix the glaze ingredients in a small bowl and Spread evenly over the top."
       },
       {
         "number": 8,
@@ -5828,7 +5828,7 @@ let recipeData = [
       }
     ],
     "tags": [
-      "side dish"
+      "Side Dish"
     ]
   },
   {
@@ -5896,11 +5896,11 @@ let recipeData = [
     "instructions": [
       {
         "number": 1,
-        "instruction": "In a heavy saucepan, stir together the milk and 1/4 cup of sugar. Bring to a boil over medium heat."
+        "instruction": "In a heavy Saucepan, stir together the milk and 1/4 cup of sugar. Bring to a boil over medium heat."
       },
       {
         "number": 2,
-        "instruction": "In a medium bowl, whisk together the egg yolks and egg. Stir together the remaining sugar and cornstarch; then stir them into the egg until smooth. When the milk comes to a boil, drizzle it into the bowl in a thin stream while mixing so that you do not cook the eggs. Return the mixture to the saucepan, and slowly bring to a boil, stirring constantly so the eggs don' t curdle or scorch on the bottom."
+        "instruction": "In a medium bowl, whisk together the egg yolks and egg. Stir together the remaining sugar and cornstarch; then stir them into the egg until smooth. When the milk comes to a boil, drizzle it into the bowl in a thin stream while mixing so that you do not cook the eggs. Return the mixture to the Saucepan, and slowly bring to a boil, stirring constantly so the eggs don' t curdle or scorch on the bottom."
       },
       {
         "number": 3,
@@ -5912,7 +5912,7 @@ let recipeData = [
       }
     ],
     "tags": [
-      "side dish"
+      "Side Dish"
     ]
   }
 ]
