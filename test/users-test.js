@@ -54,15 +54,29 @@ describe('User', () => {
 
     it('should be able to add a recipe to the favorites property', () => {
       expect(user.favoriteRecipes).to.eql([]);
-      user.addToFavorites(recipe);
-      expect(user.favoriteRecipes).to.eql([recipe])
+      user.addToFavorites(412309);
+      expect(user.favoriteRecipes).to.eql([412309])
     });
 
     it('should be able to remove from favorites', () => {
       expect(user.favoriteRecipes).to.eql([]);
-      user.addToFavorites(recipe);
-      expect(user.favoriteRecipes).to.eql([recipe])
-      user.removeFromFavorites(recipe);
+      user.addToFavorites(412309);
+      expect(user.favoriteRecipes).to.eql([412309])
+      user.removeFromFavorites(412309);
       expect(user.favoriteRecipes).to.eql([]);
-    })
+    });
+
+    it('should be able to add a recipe to the ready to cook property', () => {
+      expect(user.recipesToCook).to.eql([]);
+      user.addToReady(412309);
+      expect(user.recipesToCook).to.eql([412309])
+    });
+
+    it('should be able to remove from ready to cook', () => {
+      expect(user.recipesToCook).to.eql([]);
+      user.addToReady(412309);
+      expect(user.recipesToCook).to.eql([412309])
+      user.removeFromReady(412309);
+      expect(user.recipesToCook).to.eql([]);
+    });
 })
