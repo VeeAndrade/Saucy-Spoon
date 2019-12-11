@@ -136,6 +136,9 @@ function controlPages(event) {
   if (event.target === pantryBtn) {
     clicked = pantryContainer
   }
+  if (event.target === readyToCookBtn) {
+    clicked = readyToCookContainer
+  }
   loadPage(active, clicked)
 }
 
@@ -202,5 +205,5 @@ function populateFavorites() {
 }
 
 function populateReadyToCook() {
-  
+
 }
