@@ -39,7 +39,11 @@ navDropDown.addEventListener('click', controlPages);
 favoritesBtn.addEventListener('click', populateFavorites);
 favCardSection.addEventListener('click', showRecipe);
 favCardSection.addEventListener('click', deleteFromFavs);
-searchBtn.addEventListener('click', findRecipe)
+readyToCookSection.addEventListener('click', showRecipe);
+readyToCookSection.addEventListener('click', deleteFromFavs);
+searchBtn.addEventListener('click', findRecipe);
+searchBtn.addEventListener('click', findByTag);
+
 
 function toggleMenu() {
   hamburgerBtn.classList.toggle("change")
@@ -77,12 +81,26 @@ function namesDropdown() {
 }
 
 function findRecipe() {
+  if (nameDropdown.value) {
   recipeContainer.innerHTML = ``;
   let singleRecipe = [nameDropdown.value]
   let filteredRecipe = [recipeData.find(recipe => {
     return recipe.name.includes(singleRecipe)
   })]
   populateCards(filteredRecipe);
+  }
+}
+
+function findByTag() {
+  if (tagDropdown.value) {
+    recipeContainer.innerHTML = ``;
+    let singleTag = tagDropdown.value
+    let filteredRecipes = recipeData.filter(recipe => {
+      return recipe.tags.includes(singleTag)
+    })
+
+    populateCards(filteredRecipes)
+  }
 }
 
 function tagsDropdown() {
@@ -314,7 +332,7 @@ function populateReadyToCook() {
             <h4>${item.name}</h4>
           </section>
             <img class="favorite-recipe-img" src="${item.image}">
-              <section class="favorites-action-bar">
+              <section class="favorites-action-bar" id="${item.id}">
                 <button class="get-directions-btn action-btn">Directions</button>
                 <button class="remove-from-favorites action-btn">Remove</button>
               </section>
