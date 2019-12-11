@@ -14,6 +14,7 @@ const favCardSection = document.querySelector(".favorite-cards")
 const favoritesBtn = document.querySelector('.favorites-btn')
 const readyToCookContainer = document.querySelector('.ready-to-cook-container')
 const readyToCookBtn = document.querySelector('.ready-to-cook-btn')
+const readyToCookSection = document.querySelector('.ready-cards')
 const searchBtn = document.querySelector('.search-btn')
 const randomNum = Math.floor(Math.random() * 49 + 1);
 let cardID = [];
@@ -31,13 +32,14 @@ pantryContainer.addEventListener('click', subtractQuantity);
 recipeContainer.addEventListener('click', favoriteRecipe);
 recipeContainer.addEventListener('click', addToCook);
 recipeContainer.addEventListener('click', addRecipeToFavs);
+recipeContainer.addEventListener('click', addRecipeToReadyArr);
+readyToCookBtn.addEventListener('click', populateReadyToCook);
 recipeContainer.addEventListener('click', showRecipe);
 navDropDown.addEventListener('click', controlPages);
 favoritesBtn.addEventListener('click', populateFavorites);
 favCardSection.addEventListener('click', showRecipe);
 favCardSection.addEventListener('click', deleteFromFavs);
 searchBtn.addEventListener('click', findRecipe)
-
 
 function toggleMenu() {
   hamburgerBtn.classList.toggle("change")
@@ -125,6 +127,17 @@ function addRecipeToFavs(event) {
     }
   } else {
     user.removeFromFavorites(id)
+  }
+}
+
+function addRecipeToReadyArr(event) {
+  let id = event.target.parentNode.id
+  if (event.target.classList.contains('cook-btn-active')) {
+    if (!user.recipesToCook.includes(id)) {
+      return user.addToReady(id)
+    }
+  } else {
+    user.removeFromReady(id)
   }
 }
 
@@ -292,5 +305,20 @@ function populateFavorites() {
 }
 
 function populateReadyToCook() {
-
+  readyToCookSection.innerHTML = ``;
+  return user.recipesToCook.map(id => {
+    let item = recipeData.find(recipe => recipe.id === Number(id))
+    readyToCookSection.insertAdjacentHTML('beforeend', `
+      <div class="favorited-recipe">
+          <section class="favorite-recipe-name">
+            <h4>${item.name}</h4>
+          </section>
+            <img class="favorite-recipe-img" src="${item.image}">
+              <section class="favorites-action-bar">
+                <button class="get-directions-btn action-btn">Directions</button>
+                <button class="remove-from-favorites action-btn">Remove</button>
+              </section>
+            </div>
+    `)
+  })
 }

@@ -14,6 +14,14 @@ class User {
   removeFromFavorites(id) {
     this.favoriteRecipes.splice(this.favoriteRecipes.indexOf(id), 1)
   }
+
+  addToReady(id) {
+    this.recipesToCook.push(id)
+  }
+
+  removeFromReady(id) {
+    this.recipesToCook.splice(this.recipesToCook.indexOf(id), 1)
+  }
 }
 
 if (typeof module !== 'undefined') {
