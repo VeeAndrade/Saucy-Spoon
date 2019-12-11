@@ -1,3 +1,4 @@
+const mainSection = document.querySelector('.main');
 const contentSection = document.querySelector('.content-section');
 const recipeContainer = document.querySelector('.recipe-container');
 const nameDropdown = document.querySelector('.name-options');
@@ -14,6 +15,7 @@ const favoritesBtn = document.querySelector('.favorites-btn')
 const readyToCookContainer = document.querySelector('.ready-to-cook-container')
 const readyToCookBtn = document.querySelector('.ready-to-cook-btn')
 const randomNum = Math.floor(Math.random() * 49 + 1);
+let cardID = [];
 const user = getUser();
 
 populateCards();
@@ -22,14 +24,14 @@ ingredientsDropdown();
 tagsDropdown();
 populatePantry();
 
-hamburgerBtn.addEventListener('click', toggleMenu)
-pantryContainer.addEventListener('click', addQuantity)
-pantryContainer.addEventListener('click', subtractQuantity)
-recipeContainer.addEventListener('click', favoriteRecipe)
-recipeContainer.addEventListener('click', addToCook)
-recipeContainer.addEventListener('click', addRecipeToFavs)
-navDropDown.addEventListener('click', controlPages)
-favoritesBtn.addEventListener('click', populateFavorites)
+hamburgerBtn.addEventListener('click', toggleMenu);
+pantryContainer.addEventListener('click', addQuantity);
+pantryContainer.addEventListener('click', subtractQuantity);
+recipeContainer.addEventListener('click', favoriteRecipe);
+recipeContainer.addEventListener('click', addToCook);
+recipeContainer.addEventListener('click', showRecipe);
+navDropDown.addEventListener('click', controlPages);
+favoritesBtn.addEventListener('click', populateFavorites);
 
 function toggleMenu() {
   hamburgerBtn.classList.toggle("change")
@@ -43,7 +45,9 @@ function populateCards() {
     <div class="recipe-card" id="${recipe.id}">
       <img class="recipe-img" src=${recipe.image}>
     <div class="recipe-card-bar">
-      <p class="recipe-card-name">${recipe.name}</p>
+      <div class="recipe-card-name">
+        <p>${recipe.name}</p>
+      </div>
       <div class='btns-container' id="${recipe.id}">
         <button class="heart-btn"></button>
         <button class="cook-btn"></button>
@@ -104,9 +108,7 @@ function addRecipeToFavs(event) {
     if(!user.favoriteRecipes.includes(id)){
       return user.addToFavorites(id)
     }
-  } else { 
-    console.log(event)
-    // favoritesContainer.removeChild(event.target.parentNode)
+  } else {
     user.removeFromFavorites(id)
   }
 }
@@ -149,6 +151,71 @@ function loadPage(activePage, clickedPage) {
   clickedPage.classList.toggle("active-page")
 
   toggleMenu();
+}
+
+function showRecipe(event) {
+  if (event.target.classList.contains('recipe-img')) {
+    cardID.push(event.target.parentNode.id);
+    recipeData.forEach(recipe => {
+      if (recipe.id === Number(cardID[0])) {
+        let selectedRecipe = new Recipe(recipe.name, recipe.id, recipe.image, recipe.ingredients, recipe.instructions, recipe.tags)
+        mainSection.insertAdjacentHTML('afterbegin', `
+          <div class="shown-container">
+                <article class="recipe-shown">
+                  <header class="recipe-header-container">
+                    <h2 class="recipe-title">${selectedRecipe.name}</h2>
+                    <button class="close-btn" type="button" name="button">X</button>
+                  </header>
+                  <aside class="ingredient-items">
+                      <img class="recipe-pic" src=${selectedRecipe.image}>
+                      <div class="ingredient-list">
+                      </div>
+                  </aside>
+                  <div class="recipe-instructions">
+                    <h3>Instructions</h3>
+                    <div class="instructions-container"></div>
+                  </div>
+                </article>
+              </div>`)
+              let xBtn = document.querySelector('.close-btn');
+              xBtn.addEventListener('click', closeRecipe);
+              loadIngredients();
+              loadInstructions();
+      }
+    })
+  }
+}
+
+function closeRecipe(event) {
+  event.target.parentElement.parentElement.remove();
+  cardID.shift();
+}
+
+function loadIngredients() {
+let ingredientList = document.querySelector('.ingredient-list');
+  recipeData.forEach(recipe => {
+    if (recipe.id === Number(cardID[0])) {
+      recipe.ingredients.forEach(ingredient => {
+        ingredientList.insertAdjacentHTML('beforebegin', `
+        <p>${ingredient.name} - ${ingredient.quantity.amount} ${ingredient.quantity.unit}</p>`
+      )
+      })
+    }
+  })
+}
+
+function loadInstructions() {
+let instructionList = document.querySelector('.instructions-container');
+  recipeData.forEach(recipe => {
+    if (recipe.id === Number(cardID[0])) {
+      recipe.instructions.forEach(instruction => {
+        instructionList.insertAdjacentHTML('beforebegin', `
+        <p>Step ${instruction.number}</p>
+        <p>${instruction.instruction}</p>`
+      )
+      })
+    }
+  })
 }
 
 function populatePantry() {
