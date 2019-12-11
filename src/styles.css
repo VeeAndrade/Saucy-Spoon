@@ -116,6 +116,68 @@ p, u {
   justify-items: center;
 }
 
+.shown-container {
+  display: flex;
+  justify-content: center;
+}
+
+.recipe-shown {
+  /* display: flex; */
+  background-color: #fff;
+  border-radius: 15px;
+  border: solid black 2px;
+  width: 75%;
+  height: 70%;
+  position: fixed;
+  margin-top: 10%;
+  overflow-x: scroll
+}
+
+.recipe-header-container {
+  border-bottom: solid black 1px;
+  height: 12%;
+  text-align: center;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.recipe-title {
+  align-self: center;
+}
+
+.close-btn {
+  align-self: flex-end;
+  border-radius: 50%;
+  font-size: 1em;
+  width: 50px;
+  height: 50px;
+  border: none;
+}
+
+.ingredient-items {
+  width: 30%;
+  border-right: solid black 2px;
+  height: 100vh;
+  display: inline-block;
+}
+
+.recipe-pic {
+  width: 100%;
+}
+
+.ingredient-list {
+  width: 100%;
+  padding: 10%;
+}
+
+.recipe-instructions {
+  display: inline-block;
+  width: 69%;
+}
+
 .favorite-cover {
   height: 100vh;
   width: 100%;
