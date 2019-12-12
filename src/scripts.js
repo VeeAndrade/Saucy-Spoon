@@ -19,6 +19,7 @@ const readyToCookSection = document.querySelector('.ready-cards')
 const searchBtn = document.querySelector('.search-btn')
 const welcomeContainer = document.querySelector('.welcome-container')
 const ingredientContainer = document.querySelector('.ingredient-container')
+const recommendedList = document.querySelector('.recommended-list-section')
 const randomNum = Math.floor(Math.random() * 48 + 1);
 let cardID = [];
 const user = getUser();
@@ -48,7 +49,8 @@ readyToCookSection.addEventListener('click', deleteFromFavs);
 searchBtn.addEventListener('click', findRecipe);
 searchBtn.addEventListener('click', findByTag);
 searchBtn.addEventListener('click', findByIngredient);
-mainTop.addEventListener('click', resetRecipe)
+mainTop.addEventListener('click', resetRecipe);
+pantryBtn.addEventListener('click', populateRecommended);
 
 function toggleMenu() {
   hamburgerBtn.classList.toggle("change")
@@ -388,9 +390,14 @@ function welcomeUser() {
   welcomeContainer.insertAdjacentHTML('afterbegin', `<p class="welcome-tag">Welcome, ${user.name}</p>`)
 }
 
-checkIngredientList();
-
 function checkIngredientList() {
   let ingredientIds = user.pantry.map(ingredient => ingredient.ingredient)
   return ingredientData.filter(ingredient => ingredientIds.includes(ingredient.id))
+}
+
+function populateRecommended() {
+  let list = checkIngredientList();
+  return list.map(item => {
+  recommendedList.insertAdjacentHTML('afterend', `<li class="recommended-list-item">${item.name}<button class="add-ingredient">Add</button></li>`)
+  })
 }
