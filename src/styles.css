@@ -143,6 +143,7 @@ p, u {
   position: fixed;
   margin-top: 10%;
   overflow-x: scroll
+  /* display: flex; */
 }
 
 .recipe-header-container {
@@ -173,10 +174,16 @@ p, u {
   border-right: solid black 2px;
   height: 100vh;
   display: inline-block;
+  padding: 8px;
+}
+
+.ingredient-shown {
+  margin-top: 5px;
 }
 
 .recipe-pic {
   width: 100%;
+  border: solid black 1px;
 }
 
 .ingredient-list {
@@ -187,6 +194,20 @@ p, u {
 .recipe-instructions {
   display: inline-block;
   width: 69%;
+  height: 100%;
+
+}
+
+.instruction-title {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 1.5em;
+}
+
+.instruction-steps {
+  text-decoration: underline;
+  font-weight: bold;
+  margin-top: 5px;
 }
 
 .favorite-cover {
@@ -477,7 +498,8 @@ select {
 
 .recipe-cost {
   justify-content: flex-end;
-  align-self: flex-end; 
+  align-self: flex-end;
+  margin-right: 10px;
 }
 
 .ingredient-name {
