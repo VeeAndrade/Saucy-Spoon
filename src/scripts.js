@@ -265,7 +265,7 @@ function showRecipe(event) {
                       </div>
                   </aside>
                   <div class="recipe-instructions">
-                    <h3>Instructions</h3>
+                    <h3 class="instruction-title">Instructions</h3>
                     <div class="instructions-container"></div>
                     <section class="recipe-cost-section"><p class="recipe-cost">Total cost:$ ${selectedRecipe.calculateTotalCost(selectedRecipe.id)}</p></section>
                   </div>
@@ -291,7 +291,7 @@ let ingredientList = document.querySelector('.ingredient-list');
     if (recipe.id === Number(cardID[0])) {
       recipe.ingredients.forEach(ingredient => {
         ingredientList.insertAdjacentHTML('beforebegin', `
-        <p>${ingredient.name} - ${ingredient.quantity.amount} ${ingredient.quantity.unit}</p>`
+        <p class="ingredient-shown">- ${ingredient.name} : ${ingredient.quantity.amount} ${ingredient.quantity.unit}</p>`
       )
       })
     }
@@ -304,7 +304,7 @@ let instructionList = document.querySelector('.instructions-container');
     if (recipe.id === Number(cardID[0])) {
       recipe.instructions.forEach(instruction => {
         instructionList.insertAdjacentHTML('beforebegin', `
-        <p>Step ${instruction.number}</p>
+        <p class=instruction-steps>Step ${instruction.number}</p>
         <p>${instruction.instruction}</p>`
       )
       })
