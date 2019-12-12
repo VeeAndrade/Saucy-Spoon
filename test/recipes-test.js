@@ -60,10 +60,10 @@ describe('Recipe', () => {
   });
 
   it('should return the recipe by name', () => {
-    expect(recipe.retrieveRecipe('Loaded Chocolate Chip Pudding Cookie Cups')).to.eql(recipe)
+    expect(recipe.retrieveRecipe(595736)).to.eql(recipe)
   });
 
   it('should calculate total cost', () => {
-    expect(recipe.calculateTotalCost('Loaded Chocolate Chip Pudding Cookie Cups')).to.equal(5.04)
+    expect(recipe.calculateTotalCost(595736)).to.equal(5.04)
   });
 });

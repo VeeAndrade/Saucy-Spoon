@@ -14,7 +14,7 @@ body {
 
 .nav-bar {
   display: grid;
-  grid-template-columns: 4.8fr 6.2fr;
+  grid-template-columns: .5fr 3.8fr 5.2fr;
   width: 100%;
   height: 80px;
   position: fixed;
@@ -74,6 +74,17 @@ p, u {
   color: rgb(211, 211, 211);
   font-size: 2em;
   font-family: 'Courgette', cursive;
+}
+
+.welcome-container {
+  display: flex;
+}
+
+.welcome-tag {
+  font-size: 1.3em;
+  color: rgb(211, 211, 211);
+  align-items: center;
+  align-self: center;
 }
 
 .line1, .line2, .line3 {
@@ -418,14 +429,25 @@ select {
 
 .pantry-container {
   display: flex;
+  flex-flow: row nowrap;
   justify-content: space-between;
-  flex-direction: column;
+  flex-direction: row;
+  width: 100%;
+}
+
+.ingredient-container {
+  width: 75%;
+  height: 100vh;
+  overflow: scroll;
 }
 
 .pantry-item {
+  display: flex;
+  justify-content: space-between;
   border: solid black 1px;
-  padding: 30px 300px 30px 300px;
+  padding: 1.5%;
   margin: 3%;
+  width: 90%;
   background-color: #fff;
 }
 
@@ -439,4 +461,54 @@ select {
 
 .hide-section {
   display: none;
+}
+
+.pantry-aside {
+  width: 25%;
+  height: 100vh;
+  background-color: rgb(189, 189, 189);
+}
+
+.recipe-cost-section {
+  display: flex;
+  height: 5%;
+  flex-direction: column-reverse
+}
+
+.recipe-cost {
+  justify-content: flex-end;
+  align-self: flex-end; 
+}
+
+.ingredient-name {
+  width: 50%;
+}
+
+.increment-btns {
+  width: 15%;
+}
+
+.quantity-btn {
+  width: 15%;
+}
+
+.recommended-heading {
+  padding: 1%;
+  font-size: 1.3em;
+}
+
+.recommended-list-section {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.recommened-list {
+  padding-left: 10%;
+  padding-top: 7%;
+  font-size: 1.1em;
+}
+
+.add-ingredient {
+  padding: 2%;
+  width: 20%;
 }

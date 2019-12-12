@@ -11,9 +11,9 @@ class Recipe {
     this.tags = tags;
   }
 
-  retrieveRecipe(name) {
+  retrieveRecipe(id) {
     return recipeData.find(recipe => {
-      if (recipe.name === name) {
+      if (recipe.id === id) {
         return recipe.ingredients.map(ingredient => {
           return ingredient
         })
@@ -21,8 +21,8 @@ class Recipe {
     })
   }
 
-  calculateTotalCost(name) {
-    let recipeObj = this.retrieveRecipe(name)
+  calculateTotalCost(id) {
+    let recipeObj = this.retrieveRecipe(id)
     let recipeI = recipeObj.ingredients
     let recipeIdAndAmount = recipeI.map(i => {
       return { id:i.id, amount:i.quantity.amount}
@@ -35,7 +35,7 @@ class Recipe {
       })
       return acc;
     }, 0)
-    return sum * .01;
+    return (sum * .01).toFixed(2);
   }
 
 }

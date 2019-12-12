@@ -17,10 +17,13 @@ const readyToCookContainer = document.querySelector('.ready-to-cook-container')
 const readyToCookBtn = document.querySelector('.ready-to-cook-btn')
 const readyToCookSection = document.querySelector('.ready-cards')
 const searchBtn = document.querySelector('.search-btn')
+const welcomeContainer = document.querySelector('.welcome-container')
+const ingredientContainer = document.querySelector('.ingredient-container')
 const randomNum = Math.floor(Math.random() * 48 + 1);
 let cardID = [];
 const user = getUser();
 
+welcomeUser()
 populateCards(recipeData);
 namesDropdown();
 ingredientsDropdown();
@@ -264,6 +267,7 @@ function showRecipe(event) {
                   <div class="recipe-instructions">
                     <h3>Instructions</h3>
                     <div class="instructions-container"></div>
+                    <section class="recipe-cost-section"><p class="recipe-cost">Total cost:$ ${selectedRecipe.calculateTotalCost(selectedRecipe.id)}</p></section>
                   </div>
                 </article>
               </div>`)
@@ -314,12 +318,16 @@ function populatePantry() {
       return pantryItem.ingredient === ingredient.id;
     })
     if (ingredient) {
-    pantryContainer.innerHTML += `
+    ingredientContainer.innerHTML += `
     <div class="pantry-item" id="${ingredient.id}">
+      <div class="ingredient-name">
       <p class="pantry-item-name">${ingredient.name}</p>
-      <button class="subtract-quantity">-</button>
+      </div>
+      <div class="increment-btns">
+      <button class="subtract-quantity quantity-btn">-</button>
       <p class="pantry-item-quantity">${pantryItem.amount}</p>
-      <button class="add-quantity">+</button>
+      <button class="add-quantity quantity-btn">+</button>
+      </div>
     </div>`
   }})
 }
@@ -374,4 +382,15 @@ function populateReadyToCook() {
             </div>
     `)
   })
+}
+
+function welcomeUser() {
+  welcomeContainer.insertAdjacentHTML('afterbegin', `<p class="welcome-tag">Welcome, ${user.name}</p>`)
+}
+
+checkIngredientList();
+
+function checkIngredientList() {
+  let ingredientIds = user.pantry.map(ingredient => ingredient.ingredient)
+  return ingredientData.filter(ingredient => ingredientIds.includes(ingredient.id))
 }
