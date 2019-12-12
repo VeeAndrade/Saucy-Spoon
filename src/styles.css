@@ -203,6 +203,7 @@ p, u {
   height: 5%;
   color: #741717;
   align-items: center;
+  margin: 20px;
   margin-bottom: .5%;
   justify-content: center;
 }
@@ -224,6 +225,7 @@ p, u {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-left: 5px;
 }
 
  .favorites-action-bar {
@@ -243,12 +245,14 @@ p, u {
   border: solid black 2px;
   height: 350px;
   width: 295px;
+  border-radius: 5px;
 }
 
 .favorite-recipe-img {
   height: 70%;
   width: 100%;
-
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
 .ready-cover {
