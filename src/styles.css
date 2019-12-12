@@ -422,14 +422,25 @@ select {
 
 .pantry-container {
   display: flex;
+  flex-flow: row nowrap;
   justify-content: space-between;
-  flex-direction: column;
+  flex-direction: row;
+  width: 100%;
+}
+
+.ingredient-container {
+  width: 75%;
+  height: 100vh;
+  overflow: scroll;
 }
 
 .pantry-item {
+  display: flex;
+  justify-content: space-between;
   border: solid black 1px;
-  padding: 30px 300px 30px 300px;
+  padding: 1.5%;
   margin: 3%;
+  width: 90%;
   background-color: #fff;
 }
 
@@ -445,6 +456,12 @@ select {
   display: none;
 }
 
+.pantry-aside {
+  width: 25%;
+  height: 100vh;
+  background-color: rgb(189, 189, 189);
+}
+
 .recipe-cost-section {
   display: flex;
   height: 5%;
@@ -454,4 +471,37 @@ select {
 .recipe-cost {
   justify-content: flex-end;
   align-self: flex-end; 
+}
+
+.ingredient-name {
+  width: 50%;
+}
+
+.increment-btns {
+  width: 15%;
+}
+
+.quantity-btn {
+  width: 15%;
+}
+
+.recommended-heading {
+  padding: 1%;
+  font-size: 1.3em;
+}
+
+.recommended-list-section {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.recommened-list {
+  padding-left: 10%;
+  padding-top: 7%;
+  font-size: 1.1em;
+}
+
+.add-ingredient {
+  padding: 2%;
+  width: 20%;
 }
