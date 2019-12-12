@@ -2,13 +2,18 @@
 
 ## Abstract
 
-In this project, we created a recipe tracking / meal planning application that allows users to view their favorite recipes and plan shopping trips around them. 
+In this project, we created a recipe tracking / meal planning application that allows users to view their favorite recipes and plan shopping trips around them.
 
 The project is broken up into small classes to demonstrate objects that have a single responsibility.
 
 Test driven development has been used to drive code.
 
 Timeline was 1.5 weeks from forking repo to submitting project. 
+
+## Goals and Objectives
+ - Implement a robust testing suite using TDD
+ - Create a user interface that is easy to use and displays information in a clear way
+ - Use object and array prototype methods to perform data manipulation
 
 ## Setup
 
