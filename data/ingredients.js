@@ -60,7 +60,7 @@ let ingredientData = [{
   },
   {
     "id": 9003,
-    "name": "apple",
+    "name": "apples",
     "estimatedCostInCents": 207
   },
   {
@@ -1043,7 +1043,7 @@ let ingredientData = [{
   },
   {
     "id": 11457,
-    "name": "baby spinach leaves",
+    "name": "baby spinach",
     "estimatedCostInCents": 668
   },
   {
