@@ -467,6 +467,7 @@ select {
   width: 25%;
   height: 100vh;
   background-color: rgb(189, 189, 189);
+  overflow: scroll;
 }
 
 .recipe-cost-section {
@@ -502,13 +503,19 @@ select {
   justify-content: flex-start;
 }
 
+.recommended-list-item {
+  display: flex;
+  margin: 2%;
+  justify-content: space-between;
+}
+
 .recommened-list {
-  padding-left: 10%;
+  display: flex;
   padding-top: 7%;
   font-size: 1.1em;
 }
 
 .add-ingredient {
-  padding: 2%;
-  width: 20%;
+  padding: .5%;
+  width: 15%;
 }
