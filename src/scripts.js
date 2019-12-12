@@ -1,4 +1,5 @@
 const mainSection = document.querySelector('.main');
+const mainTop = document.querySelector('.main-top');
 const contentSection = document.querySelector('.content-section');
 const recipeContainer = document.querySelector('.recipe-container');
 const nameDropdown = document.querySelector('.name-options');
@@ -18,7 +19,7 @@ const readyToCookSection = document.querySelector('.ready-cards')
 const searchBtn = document.querySelector('.search-btn')
 const welcomeContainer = document.querySelector('.welcome-container')
 const ingredientContainer = document.querySelector('.ingredient-container')
-const randomNum = Math.floor(Math.random() * 49 + 1);
+const randomNum = Math.floor(Math.random() * 48 + 1);
 let cardID = [];
 const user = getUser();
 
@@ -42,7 +43,12 @@ navDropDown.addEventListener('click', controlPages);
 favoritesBtn.addEventListener('click', populateFavorites);
 favCardSection.addEventListener('click', showRecipe);
 favCardSection.addEventListener('click', deleteFromFavs);
-searchBtn.addEventListener('click', findRecipe)
+readyToCookSection.addEventListener('click', showRecipe);
+readyToCookSection.addEventListener('click', deleteFromFavs);
+searchBtn.addEventListener('click', findRecipe);
+searchBtn.addEventListener('click', findByTag);
+searchBtn.addEventListener('click', findByIngredient);
+mainTop.addEventListener('click', resetRecipe)
 
 function toggleMenu() {
   hamburgerBtn.classList.toggle("change")
@@ -80,12 +86,29 @@ function namesDropdown() {
 }
 
 function findRecipe() {
+  if (nameDropdown.value) {
   recipeContainer.innerHTML = ``;
   let singleRecipe = [nameDropdown.value]
   let filteredRecipe = [recipeData.find(recipe => {
     return recipe.name.includes(singleRecipe)
   })]
   populateCards(filteredRecipe);
+  }
+}
+
+function resetRecipe(event) {
+  if (event.target.classList.contains('name-options')) {
+    tagDropdown.selectedIndex = 0;
+    ingredientDropdown.selectedIndex = 0;
+  }
+  if (event.target.classList.contains('tag-options')) {
+    nameDropdown.selectedIndex = 0;
+    ingredientDropdown.selectedIndex = 0;
+  }
+  if (event.target.classList.contains('ingredient-options')) {
+    nameDropdown.selectedIndex = 0;
+    tagDropdown.selectedIndex = 0;
+  }
 }
 
 function tagsDropdown() {
@@ -103,14 +126,44 @@ function tagsDropdown() {
   })
 }
 
+function findByTag() {
+  if (tagDropdown.value) {
+    recipeContainer.innerHTML = ``;
+    let singleTag = tagDropdown.value
+    let filteredRecipes = recipeData.filter(recipe => {
+      return recipe.tags.includes(singleTag)
+    })
+    console.log(filteredRecipes)
+
+    populateCards(filteredRecipes)
+  }
+}
+
 function ingredientsDropdown() {
   let ingredientNames = ingredientData.map(element => element.name)
   let sortedIngredients = ingredientNames.sort()
   return sortedIngredients.map(element => {
     ingredientDropdown.innerHTML += `
-    <option class="test" value="test">${element}</option>
+    <option class="test" value="${element}">${element}</option>
     `
   })
+}
+
+function findByIngredient() {
+  if (ingredientDropdown.value) {
+    recipeContainer.innerHTML = ``;
+    let singleIng = ingredientDropdown.value
+    let filteredRecipes = recipeData.reduce((acc, recipe) => {
+      recipe.ingredients.forEach(ingredient => {
+        if (ingredient.name.includes(singleIng)) {
+          acc.push(recipe)
+        }
+      })
+      return acc;
+    }, [])
+    console.log(filteredRecipes)
+    populateCards(filteredRecipes)
+  }
 }
 
 function getUser() {
@@ -322,7 +375,7 @@ function populateReadyToCook() {
             <h4>${item.name}</h4>
           </section>
             <img class="favorite-recipe-img" src="${item.image}">
-              <section class="favorites-action-bar">
+              <section class="favorites-action-bar" id="${item.id}">
                 <button class="get-directions-btn action-btn">Directions</button>
                 <button class="remove-from-favorites action-btn">Remove</button>
               </section>
